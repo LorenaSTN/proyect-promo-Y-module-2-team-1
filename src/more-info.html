@@ -11,8 +11,22 @@
 
   <body>
     <div class="page">
-      <load src="./partials/header.html" title="Bienvenidos a Adalab" />
-      <load src="./partials/main.html" />
+      <load src="./partials/header.html" title="Otra página del starter kit" />
+      <main>
+        <p>
+          Esta es otra segunda página del Starter kit. Mira el fichero
+          <code class="code">./src/html/partials/main.html</code> para cómo hemos creado el enlace
+          que te ha traído hasta aquí.
+        </p>
+        <p>
+          <load
+          src="./partials/link.html"
+          aClass="link__adalab"
+          text="Volver a la página principal"
+          url="./index.html"
+        />
+        </p>
+      </main>
       <load src="./partials/footer.html" />
     </div>
     <script src="./js/main.js"></script>
