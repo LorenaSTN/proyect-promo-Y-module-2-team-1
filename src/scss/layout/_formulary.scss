@@ -1,0 +1,70 @@
+.fieldset {
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+    &__div {
+    display: flex;
+
+    }
+    &_title {
+        width: 25%;
+        padding: 5px;
+        color: $secondary-color;
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &_icon {
+        padding: 10px;
+        color: $color-title;
+
+    }
+
+    &_arrow {
+        padding: 10px ;
+        color: #54585a;
+    
+    }
+    
+}
+
+.colours {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.divcol {
+    width: 30px;
+    height: 25px;
+}
+
+.input {
+    height: 30px;
+    margin-right: 15px;
+}
+
+.colours1 {
+    display: flex;
+}
+
+.col1__1{
+    background-color: #114e4e;
+}
+
+.col1__2 {
+    background-color: #438792;
+}
+
+.col1__3 {
+    background-color: #a2deaf;
+}
+
+.options {
+    display: flex;
+}
+
