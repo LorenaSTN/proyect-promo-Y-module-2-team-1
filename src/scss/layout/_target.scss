@@ -1,0 +1,64 @@
+.section {
+  padding: 30px 50px;
+  background: lightpink;
+}
+.button-element {
+  display: flex;
+  margin: 30px 0;
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+    padding: 9px 10px;
+    border: 2px solid white;
+    color: grey;
+    background: lightpink;
+  }
+  &__trash {
+    width: 15px;
+  }
+}
+.card {
+  background: white;
+  padding-bottom: 1px;
+  .nav-card {
+    padding-left: 35px;
+    &__title {
+      padding: 20px 0 7px 0;
+      color: #114e4e;
+      font-family: $font-montserrat;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    &__sub-title {
+      font-family: $font-montserrat;
+      font-size: 18px;
+      color: grey;
+      font-weight: 500;
+    }
+  }
+  .section-image {
+    margin-top: 20px;
+    .image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 30px;
+    .icon {
+      height: 37px;
+      width: 37px;
+      border-radius: 100%;
+      border: 1px solid #114e4e;
+      padding: 5px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
