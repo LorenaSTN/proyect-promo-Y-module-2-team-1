@@ -1,0 +1,25 @@
+main {
+    background-color: $background-color-landing;
+    width: 100%;
+}
+
+.header-landing {
+    img {
+        width: 250px;
+        height: 63px;
+        margin: 50px;
+    }
+}
+
+.text {
+    padding: 50px;
+
+
+    .title {
+        color: $color-title;
+    }
+}
+
+.iconos {
+
+}
