@@ -19,7 +19,14 @@ main {
         color: $color-title;
     }
 }
-
-.iconos {
-
+.iconos { 
+    .fieldset__div_icon {
+    color: $color-title;
+}
+    .fa-keyboard{
+        color: $color-title;
+    }
+    .fa-share-nodes {
+        color:$color-title;
+    }
 }
