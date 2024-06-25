@@ -1,9 +1,15 @@
+.section-form {
+    padding: 10px;
+    border: solid #d8d8d8 1px ;
+}
+
+//Parte maquetación para las tres partes
+
 .fieldset {
     border: none;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 5px;
 
     &__div {
     display: flex;
@@ -11,15 +17,15 @@
     }
     &_title {
         width: 25%;
-        padding: 5px;
         color: $secondary-color;
         font-family: $font-secondary;
         font-size: 18px;
         font-weight: 600;
+        padding-top: 2px;
     }
 
     &_icon {
-        padding: 10px;
+        padding: 7px;
         color: $color-title;
 
     }
@@ -32,11 +38,34 @@
     
 }
 
+//Parte diseño
+
+.button-options {
+    background-color: white;
+    border: none;
+    padding: 8px;
+}
+
+.title-colours {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #54585a;
+    margin-left: 15px;
+}
+
+
 .colours {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    &__options {
+        margin-right: 10px;
+        margin-top: 5px;
+    }
 
 }
+
 
 .divcol {
     width: 30px;
@@ -48,23 +77,123 @@
     margin-right: 15px;
 }
 
-.colours1 {
+.label-colours {
     display: flex;
-}
-
-.col1__1{
-    background-color: #114e4e;
-}
-
-.col1__2 {
-    background-color: #438792;
-}
-
-.col1__3 {
-    background-color: #a2deaf;
 }
 
 .options {
     display: flex;
 }
+
+
+
+.col1 {
+    &__1{
+        background-color: #114e4e;
+    }
+
+    &__2 {
+        background-color: #438792;
+    }
+
+    &__3 {
+        background-color: #a2deaf;
+    }
+}
+
+
+.col2 {
+    &__1 {
+        background-color: #420101;
+    }
+
+    &__2 {
+        background-color: #bd1010;
+    }
+
+    &__3 {
+        background-color: #e95626;
+    }
+}
+
+.col3 {
+    &__1 {
+        background-color: #3e5b65;
+    }
+
+    &__2 {
+        background-color: #eab052;
+    }
+
+    &__3 {
+        background-color: #a0c0cf;
+    }
+}
+
+.col4 {
+    &__1 {
+        background-color: #480745;
+    }
+
+    &__2 {
+        background-color: #b400ae; 
+    }
+
+    &__3 {
+        background-color: #ffbaf4; 
+    }
+}
+
+//Parte formulario
+
+.fill {
+    padding: 10px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+
+    &__label{
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #114e4e;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    } 
+
+    &__input {
+        border: solid #a2deaf 1px;
+        height: 30px;
+    }
+}
+
+
+
+::placeholder {
+    color:#c5c5c5;
+}
+
+.button-addimage {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background-color: #e17334;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    width: 140px;
+}
+
+.blank-square {
+    height: 30px;
+    width: 30px;
+    border: solid #a2deaf 1px;
+    margin-left: 20px;
+}
+
+.div-buttons {
+    display: flex;
+}
+
+
+
+
 

@@ -1,31 +1,123 @@
-<main>
 
 
-    <form action="">
-        <fieldset class="fieldset">
-            <div class="fieldset__div">
-                <i class="fa-regular fa-object-ungroup fieldset__div_icon"></i><h2 class="fieldset__div_title">DISEÑA</h2> 
-            </div>
-            <span>&#8249;</span>  
-        </fieldset>
-        <div class="colours">
-            <p class="title-colours">COLORES</p>
-            <label for="colours1" class="colours1">
+    <section class="section-form">
+        <form action="">
+            <fieldset class="fieldset">
+                <div class="fieldset__div">
+                    <i class="fa-regular fa-object-ungroup fieldset__div_icon"></i>
+                    <h2 class="fieldset__div_title">DISEÑA</h2> 
+                </div>
+                <button class="button-options"><i class="fa-solid fa-chevron-up"></i></button>
+            </fieldset>
+            <div class="colours">
+                <p class="title-colours">COLORES</p>
+    
+                <div class="colours__options">
+                <label for="colours1" class="label-colours ">
+                    <input
+                    class="input" 
+                    id="colours1"
+                    type="radio"
+                    value="colours1"
+                    name="colours1">
+    
+                    <div class="options">
+                    <div class="divcol col1__1"></div> 
+                    <div class="divcol col1__2"></div>
+                    <div class="divcol col1__3"></div>
+                    </div>
+                </label>
+    
+                <label for="colours2" class="label-colours ">
+                  <input
+                  class="input" 
+                  id="colours2"
+                  type="radio"
+                  value="colours2"
+                  name="colours2">
+    
+                  <div class="options">
+                  <div class="divcol col2__1"></div> 
+                  <div class="divcol col2__2"></div>
+                  <div class="divcol col2__3"></div>
+                  </div>
+              </label>
+    
+    
+              <label for="colours3" class="label-colours ">
                 <input
                 class="input" 
-                id="colours1"
+                id="colours3"
                 type="radio"
-                value="colours1"
-                name="colours1">
-
+                value="colours3"
+                name="colours3">
+    
                 <div class="options">
-                <div class="divcol col1__1"></div> 
-                <div class="divcol col1__2"></div>
-                <div class="divcol col1__3"></div>
+                <div class="divcol col3__1"></div> 
+                <div class="divcol col3__2"></div>
+                <div class="divcol col3__3"></div>
                 </div>
             </label>
-          
-        </div>
-      </form>
-
-</main>
+    
+            <label for="colours4" class="label-colours ">
+              <input
+              class="input" 
+              id="colours4"
+              type="radio"
+              value="colours4"
+              name="colours4">
+    
+              <div class="options">
+              <div class="divcol col4__1"></div> 
+              <div class="divcol col4__2"></div>
+              <div class="divcol col4__3"></div>
+              </div>
+          </label>
+            </div>
+            </div>
+          </form>
+        </section>
+    
+        <section class="section-form form-fill">
+          <form action="">
+            <fieldset class="fieldset">
+              <div class="fieldset__div">
+                <i class="fa-regular fa-keyboard fieldset__div_icon"></i>
+                <h2 class="fieldset__div_title">RELLENA</h2>
+              </div>
+              <button class="button-options"><i class="fa-solid fa-chevron-up"></i></button>
+            </fieldset>
+    
+            <div class="fill">
+              <label for="nombre" class="fill__label">Nombre Completo</label>
+              <input type="text" class=" fill__input" id="nombre" placeholder=" Ej: Sally Jill">
+    
+              <label for="job" class="fill__label">Puesto</label>
+              <input type="text" class=" fill__input" id="job" placeholder=" Ej: Front-end unicorn">
+    
+              <label for="image" class="fill__label">Imagen de perfil</label>
+              <div class="div-buttons">
+              <span class="button-addimage">Añadir Imagen</span>
+               <span class="blank-square"></span>
+              </div>
+    
+              <label for="email" class="fill__label">Email</label>
+              <input type="email" class=" fill__input" id="email" placeholder=" Ej: sally-hill@gmail.com">
+            
+              <label for="telephone" class="fill__label">Teléfono</label>
+              <input type="number" class=" fill__input" id="telephone" placeholder=" Ej: 555-55-55-55">
+            
+              <label for="linkedin" class="fill__label">Linkedin</label>
+              <input type="text" class="fill__input" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill">
+    
+              <label for="github" class="fill__label">Github</label>
+              <input type="text" class="fill__input" id="github" placeholder=" Ej: @sally-hill">
+            
+            </div>
+    
+    
+    
+    
+          </form>
+        </section>
+        
