@@ -3,30 +3,47 @@ main {
     width: 100%;
 }
 
-/*.header-landing {
-    img {
-        width: 250px;
-        height: 63px;
-        margin: 50px;
-    }
-} */
 
-.text {
+section.block-text {
+    display: flex;
+    flex-direction: column;
     padding: 50px;
 
 
-    .title {
+    .title1 {
         color: $color-title;
+        margin: 10px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .suptitle { 
+        font-family: sans-serif;
+        color: $color-suptitle;
+        font-size: 13px;
+       
+ 
     }
 }
-.iconos { 
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid $color-title;
+    padding: 30px 30px;
+    margin: 30px;
+    
+
     .fieldset__div_icon {
-    color: $color-title;
-}
-    .fa-keyboard{
         color: $color-title;
     }
+
+    .fa-keyboard {
+        color: $color-title;
+    }
+
     .fa-share-nodes {
-        color:$color-title;
+        color: $color-title;
     }
 }
