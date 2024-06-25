@@ -1,0 +1,60 @@
+.container-share {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.button-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: $color-title;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205);
+  &__image {
+    font-size: 25px;
+  }
+  &--disabled {
+    background: #d5d5d5;
+  }
+}
+.line {
+  width: 80%;
+  border-color: lightgrey;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  &__link {
+    color: $color-title;
+  }
+  h3 {
+    color: #54585a;
+  }
+}
+.button-twitter {
+  padding: 7px 15px;
+  border-radius: 5px;
+  background: #00a0f5;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  i {
+    font-size: 18px;
+  }
+}
+
+//Esta classe va en el button de share cuando se ha creado la tarjeta.
+//button-share--disabled
