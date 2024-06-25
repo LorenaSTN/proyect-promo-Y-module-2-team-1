@@ -1,6 +1,6 @@
 .section {
   padding: 30px 50px;
-  background: lightpink;
+  background: #621d75;
 }
 .button-element {
   display: flex;
@@ -13,7 +13,7 @@
     padding: 9px 10px;
     border: 2px solid white;
     color: grey;
-    background: lightpink;
+    background: #621d75;
   }
   &__trash {
     width: 15px;
@@ -26,7 +26,7 @@
     padding-left: 35px;
     &__title {
       padding: 20px 0 7px 0;
-      color: #114e4e;
+      color: #621d75;
       font-family: $font-montserrat;
       font-size: 20px;
       font-weight: 800;
@@ -53,7 +53,7 @@
       height: 37px;
       width: 37px;
       border-radius: 100%;
-      border: 1px solid #114e4e;
+      border: 2.5px solid #621d75;
       padding: 5px;
       img {
         width: 100%;
