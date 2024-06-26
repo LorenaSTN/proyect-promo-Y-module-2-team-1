@@ -14,6 +14,7 @@
     border: 2px solid white;
     color: grey;
     background: #621d75;
+    cursor: pointer;
   }
   &__trash {
     width: 15px;
@@ -55,10 +56,10 @@
       border-radius: 100%;
       border: 2.5px solid #621d75;
       padding: 5px;
-      img {
-        width: 100%;
-        height: auto;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
     }
   }
 }
