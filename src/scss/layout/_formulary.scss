@@ -8,21 +8,15 @@
 .fieldset {
     border: none;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 
-    &__div {
-    display: flex;
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
 
-    }
-    &_title {
-        width: 25%;
-        color: $secondary-color;
-        font-family: $font-secondary;
-        font-size: 18px;
-        font-weight: 600;
-        padding-top: 2px;
-    }
+     &__div {
+     display: flex;
+
 
     &_icon {
         padding: 7px;
@@ -30,13 +24,25 @@
 
     }
 
-    &_arrow {
-        padding: 10px ;
-        color: #54585a;
+    &_title {
+        width: 25%;
+        color: $secondary-color;
+        font-family: $font-secondary;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 6px;
+    }
+    }
+
+    // &_arrow {
+    //     padding: 10px ;
+    //     color: #54585a;
     
+    // }
+
     }
     
-}
+
 
 //Parte diseño
 
