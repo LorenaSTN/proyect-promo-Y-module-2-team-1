@@ -14,6 +14,7 @@ const cardName = document.querySelector (".js-card-name");
 const formJob = document.querySelector (".js-form-job");
 const cardJob = document.querySelector (".js-card-job");
 const formEmail = document.querySelector (".js-form-email");
+const cardEmail = document.querySelector (".js-card-email");
 
 
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
@@ -28,11 +29,13 @@ iconos- href=
 
 const inputsFormFill = document.querySelector(".js-form-fill");
 
-inputsFormFill.addEventListener("keydown",(event) => {
+inputsFormFill.addEventListener("input",(event) => {
     // console.log ("Hola");
     if (event.target.id === "name") {
         cardName.innerHTML = event.target.value;
-    }
+    } else if (event.target.id === "job"){
+        cardJob.innerHTML = event.target.value;
+    } 
 });
 
 // formName.addEventListener ("input" , (event)=>{
@@ -40,10 +43,10 @@ inputsFormFill.addEventListener("keydown",(event) => {
 //     cardName.innerHTML = value;
 // } )
 
-formJob.addEventListener ("input" , (event)=> {
+/* formJob.addEventListener ("input" , (event)=> {
     const value1 = event.target.value;
     cardJob.innerHTML = value1;
-})
+}) */
 
 
 
