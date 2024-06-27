@@ -15,14 +15,37 @@ const formJob = document.querySelector (".js-form-job");
 const cardJob = document.querySelector (".js-card-job");
 const formEmail = document.querySelector (".js-form-email");
 
-formName.addEventListener ("input" , (event)=>{
-    const value = event.target.value;
-    cardName.innerHTML = value;
-} )
+
+/*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
+Si la usuaria escribe en el input de job/trabajo, se ve visualizado en el preview card (en el job/trabajo)
+.....
+
+=== / contenido y tipo de dato
+== / contenido
+
+iconos- href= 
+*/
+
+const inputsFormFill = document.querySelector(".js-form-fill");
+
+inputsFormFill.addEventListener("keydown",(event) => {
+    // console.log ("Hola");
+    if (event.target.id === "name") {
+        cardName.innerHTML = event.target.value;
+    }
+});
+
+// formName.addEventListener ("input" , (event)=>{
+//     const value = event.target.value;
+//     cardName.innerHTML = value;
+// } )
 
 formJob.addEventListener ("input" , (event)=> {
     const value1 = event.target.value;
     cardJob.innerHTML = value1;
 })
+
+
+
 
 
