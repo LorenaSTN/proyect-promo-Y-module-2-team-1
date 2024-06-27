@@ -17,6 +17,7 @@ const formEmail = document.querySelector (".js-form-email");
 const cardEmail = document.querySelector (".js-card-email");
 
 
+
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
 Si la usuaria escribe en el input de job/trabajo, se ve visualizado en el preview card (en el job/trabajo)
 .....
@@ -35,8 +36,12 @@ inputsFormFill.addEventListener("input",(event) => {
         cardName.innerHTML = event.target.value;
     } else if (event.target.id === "job"){
         cardJob.innerHTML = event.target.value;
-    } 
+    } else if (event.target.id === "email"){
+        cardEmail.innerHTML = `href = "${formEmail.value}"`
+    }
 });
+
+
 
 // formName.addEventListener ("input" , (event)=>{
 //     const value = event.target.value;
