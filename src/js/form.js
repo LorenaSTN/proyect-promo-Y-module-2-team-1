@@ -42,7 +42,6 @@ inputsFormFill.addEventListener("input",(event) => {
 });
 
 
-
 // formName.addEventListener ("input" , (event)=>{
 //     const value = event.target.value;
 //     cardName.innerHTML = value;
