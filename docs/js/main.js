@@ -1,2 +1,2 @@
-console.log(">> Ready :)");
+document.querySelector(".js-form-name");const r=document.querySelector(".js-card-name");document.querySelector(".js-form-job");const o=document.querySelector(".js-card-job"),t=document.querySelector(".js-form-email"),c=document.querySelector(".js-card-email"),a=document.querySelector(".js-form-fill");a.addEventListener("input",e=>{e.target.id==="name"?r.innerHTML=e.target.value:e.target.id==="job"?o.innerHTML=e.target.value:e.target.id==="email"&&(c.innerHTML=`href = "${t.value}"`)});
 //# sourceMappingURL=main.js.map

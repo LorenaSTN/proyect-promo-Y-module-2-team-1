@@ -3,17 +3,249 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Crea tu tarjeta de visita</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/3c33987a45.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     
-    <link rel="icon" href="./assets/images/favicon.png" />
-    <link rel="stylesheet" href="./assets/main-62015576.css">
+    <script
+      src="https://kit.fontawesome.com/3c33987a45.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/main-910824fe.css">
   </head>
 
   <body>
-  
- 
+    <section class="section">
+  <div class="button-element">
+    <button class="button-element__button">
+      <i class="fa-solid fa-trash"></i> RESET
+    </button>
+  </div>
 
+  <div class="card">
+    <div class="nav-card">
+      <h1 class="nav-card__title js-card-name">Nombre Apellido</h1>
+      <h2 class="nav-card__sub-title js-card-job">Front-end developer</h2>
+    </div>
+
+    <div class="section-image">
+      <img class="imagen" src="./images/yesse.png" />
+    </div>
+
+    <div class="icons">
+      <div class="icon">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+      </div>
+
+      <div class="icon">
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+
+      <div class="icon">
+        <i class="fa-brands fa-github"></i>
+      </div>
+
+      <div class="icon">
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+    <section class="section-form">
+        <form action="">
+            <fieldset class="fieldset">
+              <div class="fieldset__main">
+                <div class="fieldset__div">
+                    <i class="fa-regular fa-object-ungroup fieldset__div_icon"></i>
+                    <h2 class="fieldset__div_title">DISEÑA</h2> 
+                   
+                </div>
+                <button class="button-options"><i class="fa-solid fa-chevron-up"></i></button>
+              </div>
+           
+            <div class="colours">
+                <p class="title-colours">COLORES</p>
+    
+                <div class="colours__options">
+                <label for="colours1" class="label-colours ">
+                    <input
+                    class="input" 
+                    id="colours1"
+                    type="radio"
+                    value="colours1"
+                    name="colours1">
+    
+                    <div class="options">
+                    <div class="divcol col1__1"></div> 
+                    <div class="divcol col1__2"></div>
+                    <div class="divcol col1__3"></div>
+                    </div>
+                </label>
+    
+                <label for="colours2" class="label-colours ">
+                  <input
+                  class="input" 
+                  id="colours2"
+                  type="radio"
+                  value="colours2"
+                  name="colours2">
+    
+                  <div class="options">
+                  <div class="divcol col2__1"></div> 
+                  <div class="divcol col2__2"></div>
+                  <div class="divcol col2__3"></div>
+                  </div>
+              </label>
+    
+    
+              <label for="colours3" class="label-colours ">
+                <input
+                class="input" 
+                id="colours3"
+                type="radio"
+                value="colours3"
+                name="colours3">
+    
+                <div class="options">
+                <div class="divcol col3__1"></div> 
+                <div class="divcol col3__2"></div>
+                <div class="divcol col3__3"></div>
+                </div>
+            </label>
+    
+            <label for="colours4" class="label-colours ">
+              <input
+              class="input" 
+              id="colours4"
+              type="radio"
+              value="colours4"
+              name="colours4">
+    
+              <div class="options">
+              <div class="divcol col4__1"></div> 
+              <div class="divcol col4__2"></div>
+              <div class="divcol col4__3"></div>
+              </div>
+          </label>
+
+          <label for="colours5" class="label-colours ">
+            <input
+            class="input" 
+            id="colours5"
+            type="radio"
+            value="colours5"
+            name="colours5">
+    
+            <div class="options">
+            <div class="divcol col5__1"></div> 
+            <div class="divcol col5__2"></div>
+            <div class="divcol col5__3"></div>
+            </div>
+        </label>
+
+
+        <label for="colours6" class="label-colours ">
+          <input
+          class="input" 
+          id="colours6"
+          type="radio"
+          value="colours6"
+          name="colours6">
+    
+          <div class="options">
+          <div class="divcol col6__1"></div> 
+          <div class="divcol col6__2"></div>
+          <div class="divcol col6__3"></div>
+          </div>
+      </label>
+            </div>
+            </div>
+          </fieldset>
+          </form>
+       
+        </section>
+    
+        <section class="section-form form-fill">
+          <form action="">
+            <fieldset class="fieldset">
+              <div class="fieldset__main">
+              <div class="fieldset__div">
+                <i class="fa-regular fa-keyboard fieldset__div_icon"></i>
+                <h2 class="fieldset__div_title">RELLENA</h2>
+              </div>
+              <button class="button-options"><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+    
+            <div class="fill js-form-fill">
+              <label for="name" class="fill__label">Nombre Completo</label>
+              <input type="text" class=" fill__input js-form-name" id="name" placeholder=" Ej: Sally Jill">
+    
+              <label for="job" class="fill__label">Puesto</label>
+              <input type="text" class=" fill__input js-form-job" id="job" placeholder=" Ej: Front-end unicorn">
+    
+              <label for="image" class="fill__label">Imagen de perfil</label>
+              <div class="div-buttons">
+              <span class="button-addimage">Añadir Imagen</span>
+              <span class="blank-square"></span>
+              </div>
+    
+              <label for="email" class="fill__label">Email</label>
+              <input type="email" class=" fill__input js-form-email" id="email" placeholder=" Ej: sally-hill@gmail.com">
+            
+              <label for="telephone" class="fill__label">Teléfono</label>
+              <input type="number" class=" fill__input js-form-telephone" id="telephone" placeholder=" Ej: 555-55-55-55">
+            
+              <label for="linkedin" class="fill__label">Linkedin</label>
+              <input type="text" class="fill__input js-form-linkedin" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill">
+    
+              <label for="github" class="fill__label">Github</label>
+              <input type="text" class="fill__input js-form-github" id="github" placeholder=" Ej: @sally-hill">
+            
+            </div>
+          </fieldset>
+    
+    
+    
+    
+          </form>
+        </section>
+        
+    <section class="container-share">
+  <section class="">
+    <button class="button-share">
+      <i class="button-share__image fa-regular fa-address-card"></i>
+      <span>CREAR TARJETA</span>
+    </button>
+  </section>
+  <hr class="line" />
+  <section class="card-info">
+    <h3>La tarjeta ha sido creada:</h3>
+    <a class="card-info__link" href="">Link</a>
+    <button class="button-twitter">
+      <i class="fa-brands fa-twitter"></i>
+      <span> Compartir en Twitter</span>
+    </button>
+  </section>
+
+  <hr class="line" />
+</section>
 
     <script src="./js/main.js"></script>
   </body>
