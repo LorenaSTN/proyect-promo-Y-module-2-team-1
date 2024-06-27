@@ -37,7 +37,7 @@ inputsFormFill.addEventListener("input",(event) => {
     } else if (event.target.id === "job"){
         cardJob.innerHTML = event.target.value;
     } else if (event.target.id === "email"){
-        cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =maito.)
+        cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
     }
 });
 
