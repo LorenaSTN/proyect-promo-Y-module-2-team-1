@@ -35,15 +35,16 @@ section.block-text {
         font-size: 13px;
         text-align: center;
 
-
         @media all and (min-width: 768px) {
             font-size: 16px;
-            }
+            max-width: 325px;
+            margin: 0 auto;
+        }
         
-
         @media all and (min-width: 1200px) {
             font-size: 16px;
-
+            max-width: 325px;
+            margin: 0 auto;
         }
     }
 }
@@ -53,8 +54,10 @@ section.block-text {
     justify-content: space-around;
     gap: 20px;
     border: 1px solid $color-title;
-    padding: 30px 30px;
-    margin: 30px;
+    padding: 18px 30px;
+    margin: 30px auto;
+    max-width: 268px;
+
 
     &__wrapper {
         display: flex;
