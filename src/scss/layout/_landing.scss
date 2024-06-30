@@ -53,8 +53,10 @@ section.block-text {
     justify-content: space-around;
     gap: 20px;
     border: 1px solid $color-title;
-    padding: 30px 30px;
-    margin: 30px;
+    padding: 18px 30px;
+    margin: 30px auto;
+    max-width: 268px;
+
 
     &__wrapper {
         display: flex;
