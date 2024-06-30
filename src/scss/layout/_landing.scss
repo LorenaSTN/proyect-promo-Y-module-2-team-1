@@ -35,15 +35,16 @@ section.block-text {
         font-size: 13px;
         text-align: center;
 
-
         @media all and (min-width: 768px) {
             font-size: 16px;
-            }
+            max-width: 325px;
+            margin: 0 auto;
+        }
         
-
         @media all and (min-width: 1200px) {
             font-size: 16px;
-
+            max-width: 325px;
+            margin: 0 auto;
         }
     }
 }
