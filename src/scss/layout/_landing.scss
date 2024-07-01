@@ -1,6 +1,9 @@
+
 main {
     background-color: $background-color-landing;
     width: 100%;
+    min-height: calc(100vh - 20vh - 20vh);
+    
 }
 
 
@@ -40,7 +43,7 @@ section.block-text {
             max-width: 325px;
             margin: 0 auto;
         }
-        
+
         @media all and (min-width: 1200px) {
             font-size: 16px;
             max-width: 325px;
@@ -64,7 +67,7 @@ section.block-text {
         flex-direction: column;
         align-items: center;
         font-size: 12.8px;
-        
+
         i {
             font-size: 22px;
             color: $color-title;
@@ -91,20 +94,22 @@ section.block-text {
 
 @media all and (min-width: 768px) {
     .actions {
-        padding-top:280px;
+        padding-top: 280px;
         padding-bottom: 75px;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 16px;
     }
 }
 
 @media all and (min-width: 1200px) {
     .actions {
-        padding-top:280px;
+        padding-top: 280px;
         padding-bottom: 75px;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 16px;
     }
 }
