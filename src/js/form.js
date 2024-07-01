@@ -9,16 +9,18 @@ El formulario se mostrarà en la tarjeta
 4-Iconos: Cuando la usuari@ haga click se redirigirá a un enlace.******
 */
 
-const formName = document.querySelector (".js-form-name");
-const cardName = document.querySelector (".js-card-name");
-const formJob = document.querySelector (".js-form-job");
-const cardJob = document.querySelector (".js-card-job");
-const formEmail = document.querySelector (".js-form-email");
-const cardEmail = document.querySelector (".js-card-email");
-const formTelephone = document.querySelector (".js-form-telephone");
-const cardTelephone = document.querySelector (".js-card-telephone");
+const formName = document.querySelector(".js-form-name");
+const cardName = document.querySelector(".js-card-name");
+const formJob = document.querySelector(".js-form-job");
+const cardJob = document.querySelector(".js-card-job");
+const formEmail = document.querySelector(".js-form-email");
+const cardEmail = document.querySelector(".js-card-email");
+const formTelephone = document.querySelector(".js-form-telephone");
+const cardTelephone = document.querySelector(".js-card-telephone");
 const formLinkedin = document.querySelector(".js-form-linkedin");
-const cardLinkedin = document.querySelector (".js-card-linkedin");
+const cardLinkedin = document.querySelector(".js-card-linkedin");
+const formGithub = document.querySelector(".js-form-github");
+const cardGithub = document.querySelector(".js-card-github");
 
 
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
@@ -33,27 +35,23 @@ iconos- href=
 
 const inputsFormFill = document.querySelector(".js-form-fill");
 
-inputsFormFill.addEventListener("input",(event) => {
+inputsFormFill.addEventListener("input", (event) => {
     // event.preventDefault();
     // console.log ("Hola");
     if (event.target.id === "name") {
         cardName.innerHTML = event.target.value;
-    } else if (event.target.id === "job"){
+    } else if (event.target.id === "job") {
         cardJob.innerHTML = event.target.value;
-    } else if (event.target.id === "email"){
+    } else if (event.target.id === "email") {
         cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
-    }else if (event.target.id === "telephone") {
-        cardTelephone.href = `telf: ${formTelephone.value}`;
-    }else if (event.target.id === "linkedin") {
+    } else if (event.target.id === "telephone") {
+        cardTelephone.href = `tel: ${formTelephone.value}`;
+    } else if (event.target.id === "linkedin") {
         cardLinkedin.href = `${formLinkedin.value}`;
-    
-
-
+     } else if (event.target.id === "github") {
+        cardGithub.href = `${formGithub.value}`;
+        }
     }
-
-        
-
-}
 );
 
 // const cardIconEmail = document.querySelector(".js-icon-email");
@@ -71,7 +69,7 @@ inputsFormFill.addEventListener("input",(event) => {
 //         const emailInputValue = formEmail.value;
 //         emailInputValue = `mailto:${emailInputValue}`;
 //         window.location.href = emailInputValue; 
-        // cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
+// cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
 
 // formName.addEventListener ("input" , (event)=>{
 //     const value = event.target.value;
