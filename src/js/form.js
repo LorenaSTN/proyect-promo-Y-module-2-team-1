@@ -15,7 +15,10 @@ const formJob = document.querySelector (".js-form-job");
 const cardJob = document.querySelector (".js-card-job");
 const formEmail = document.querySelector (".js-form-email");
 const cardEmail = document.querySelector (".js-card-email");
-
+const formTelephone = document.querySelector (".js-form-telephone");
+const cardTelephone = document.querySelector (".js-card-telephone");
+const formLinkedin = document.querySelector(".js-form-linkedin");
+const cardLinkedin = document.querySelector (".js-card-linkedin");
 
 
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
@@ -31,6 +34,7 @@ iconos- href=
 const inputsFormFill = document.querySelector(".js-form-fill");
 
 inputsFormFill.addEventListener("input",(event) => {
+    // event.preventDefault();
     // console.log ("Hola");
     if (event.target.id === "name") {
         cardName.innerHTML = event.target.value;
@@ -38,9 +42,36 @@ inputsFormFill.addEventListener("input",(event) => {
         cardJob.innerHTML = event.target.value;
     } else if (event.target.id === "email"){
         cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
-    }
-});
+    }else if (event.target.id === "telephone") {
+        cardTelephone.href = `telf: ${formTelephone.value}`;
+    }else if (event.target.id === "linkedin") {
+        cardLinkedin.href = `${formLinkedin.value}`;
+    
 
+
+    }
+
+        
+
+}
+);
+
+// const cardIconEmail = document.querySelector(".js-icon-email");
+
+// cardIconEmail.addEventListener ("click", (event) =>{
+//     event.preventDefault()
+//         event.target.id === "email" ;
+//         const emailInputValue = formEmail.value;
+//         emailInputValue = ` mailto:${emailInputValue}`;
+//         window.location.href = emailInputValue; 
+//     }
+// )
+
+// else if (event.target.id === "email"){
+//         const emailInputValue = formEmail.value;
+//         emailInputValue = `mailto:${emailInputValue}`;
+//         window.location.href = emailInputValue; 
+        // cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
 
 // formName.addEventListener ("input" , (event)=>{
 //     const value = event.target.value;
