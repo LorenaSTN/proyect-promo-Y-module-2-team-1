@@ -12,7 +12,7 @@ main {
 section.block-text {
     display: flex;
     flex-direction: column;
-    margin-top: 38px;
+    padding-top: 38px;
    
    
 
@@ -39,8 +39,9 @@ section.block-text {
         font-size: 13px;
         text-align: center;
         font-weight: normal;
-        margin-top: 0 auto;
+        margin: 0 auto;
         font-family: 'Open Sans', sans-serif;
+        max-width: 280px;
        
 
         @media all and (min-width: 768px) {
