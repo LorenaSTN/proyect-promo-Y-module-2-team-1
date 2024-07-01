@@ -1,26 +1,27 @@
-
-main {
-    background-color: $background-color-landing;
-    width: 100%;
-    min-height: calc(100vh - 20vh - 20vh);
-    
+body,
+html {
+    height: 100vh;
+    background-color: $background-color-landing; 
 }
 
+main {
+    width: 100%;
+    min-height: calc(100vh - 20vh - 20vh);
+}
 
 section.block-text {
     display: flex;
     flex-direction: column;
-    padding: 50px 50px 0;
-
+    margin-top: 38px;
+   
+   
 
     .title-card {
         font-family: $font-landing-title;
         text-align: center;
         color: $color-title;
-        margin: 10px;
         font-size: 20px;
-        font-weight: 900;
-
+      
 
         @media all and (min-width: 768px) {
             font-size: 24px;
@@ -34,9 +35,13 @@ section.block-text {
     }
 
     .subtitle {
-        color: $color-subtitle;
+        color: $color-link;
         font-size: 13px;
         text-align: center;
+        font-weight: normal;
+        margin-top: 0 auto;
+        font-family: 'Open Sans', sans-serif;
+       
 
         @media all and (min-width: 768px) {
             font-size: 16px;
@@ -57,9 +62,10 @@ section.block-text {
     justify-content: space-around;
     gap: 20px;
     border: 1px solid $color-title;
-    padding: 18px 30px;
+    padding: 20px 20px;
     margin: 30px auto;
     max-width: 268px;
+  
 
 
     &__wrapper {
@@ -85,16 +91,19 @@ section.block-text {
     padding: 10px 20px;
     font-size: 16px;
 
+
+
     &.green {
         background-color: $color-link;
         border-radius: 21px;
         color: white;
+
     }
 }
 
 @media all and (min-width: 768px) {
     .actions {
-        padding-top: 280px;
+        padding-top: 150px;
         padding-bottom: 75px;
     }
 
