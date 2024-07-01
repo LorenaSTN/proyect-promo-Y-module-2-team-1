@@ -42,16 +42,14 @@ inputsFormFill.addEventListener("input",(event) => {
         cardJob.innerHTML = event.target.value;
     } else if (event.target.id === "email"){
         cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
+        cardEmail.title = formEmail.value; //pusimos la propiedad title en el HTML de los iconos que muestra el valor cuando haces hover
     }else if (event.target.id === "telephone") {
         cardTelephone.href = `telf: ${formTelephone.value}`;
+        cardTelephone.title =  formTelephone.value;
     }else if (event.target.id === "linkedin") {
         cardLinkedin.href = `${formLinkedin.value}`;
-    
-
-
+        cardLinkedin.title = formLinkedin.value;
     }
-
-        
 
 }
 );
