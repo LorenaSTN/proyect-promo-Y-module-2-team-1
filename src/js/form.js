@@ -20,6 +20,8 @@ El formulario se mostrarà en la tarjeta
 4-Iconos: Cuando la usuari@ haga click se redirigirá a un enlace.******
 */
 
+
+
 const formName = document.querySelector(".js-form-name");
 const cardName = document.querySelector(".js-card-name");
 const formJob = document.querySelector(".js-form-job");
@@ -43,8 +45,24 @@ Si la usuaria escribe en el input de job/trabajo, se ve visualizado en el previe
 === / contenido y tipo de dato
 == / contenido
 
+
+
 iconos- href= 
 */
+
+const buttonArrow = document.querySelector(".js-button-arrow");
+const dropdown = document.querySelector(".js-dropdown");
+
+// function de ocultar- no se porque no funciona?
+function handleHidingForm (event) {
+    event.preventDefault();
+    dropdown.classList.toggle("hide");
+};
+
+buttonArrow.addEventListener("click", handleHidingForm); 
+
+///////
+
 
 const inputsFormFill = document.querySelector(".js-form-fill");
 
