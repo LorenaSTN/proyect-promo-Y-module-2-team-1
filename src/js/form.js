@@ -52,16 +52,27 @@ iconos- href=
 
 const buttonArrow = document.querySelector(".js-button-arrow");
 const dropdown = document.querySelector(".js-dropdown");
-const buttonArrow2 = document.querySelector(".js-button-arrow2")
+const buttonArrow2 = document.querySelector(".js-button-arrow2");
+const dropdown2 = document.querySelector(".js-dropdown2");
+
 
 // function de ocultar- no se porque no funciona?
-function handleHidingForm (event) {
+function handleHidingPalettes (event) {
     event.preventDefault();
     dropdown.classList.toggle("hiden");
     buttonArrow.classList.toggle("rotate");
 };
+buttonArrow.addEventListener("click", handleHidingPalettes); 
 
-buttonArrow.addEventListener("click", handleHidingForm); 
+function handleHidingForm (event) {
+    event.preventDefault();
+    dropdown2.classList.toggle("hiden");
+    buttonArrow2.classList.toggle("rotate");
+};
+
+
+
+buttonArrow2.addEventListener("click", handleHidingForm)
 
 
 ///////
