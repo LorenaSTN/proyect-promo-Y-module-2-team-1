@@ -56,7 +56,8 @@ const dropdown = document.querySelector(".js-dropdown");
 // function de ocultar- no se porque no funciona?
 function handleHidingForm (event) {
     event.preventDefault();
-    dropdown.classList.toggle("collapsed");
+    dropdown.classList.toggle("hiden");
+    buttonArrow.classList.toggle("rotate");
 };
 
 buttonArrow.addEventListener("click", handleHidingForm); 
