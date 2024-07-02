@@ -52,6 +52,7 @@ iconos- href=
 
 const buttonArrow = document.querySelector(".js-button-arrow");
 const dropdown = document.querySelector(".js-dropdown");
+const buttonArrow2 = document.querySelector(".js-button-arrow2")
 
 // function de ocultar- no se porque no funciona?
 function handleHidingForm (event) {
@@ -61,6 +62,7 @@ function handleHidingForm (event) {
 };
 
 buttonArrow.addEventListener("click", handleHidingForm); 
+
 
 ///////
 
