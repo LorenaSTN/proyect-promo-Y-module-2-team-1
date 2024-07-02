@@ -204,7 +204,9 @@
     }
 }
 
-
+.form__photoinput {
+    display: none;
+}
 
 ::placeholder {
     color:#c5c5c5;
@@ -225,6 +227,9 @@
     width: 30px;
     border: solid #a2deaf 1px;
     margin-left: 20px;
+    &img{
+        object-fit: cover;
+    } 
 }
 
 .div-buttons {

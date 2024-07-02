@@ -1,5 +1,16 @@
 'use strict';
 
+const dataCard =
+{
+    "palette": null,
+    "name": "",
+    "job": "",
+    "phone": "",
+    "email": "",
+    "linkedin": "",
+    "github": "",
+    "photo": "",
+}
 
 /* 
 El formulario se mostrarà en la tarjeta
@@ -21,6 +32,8 @@ const formLinkedin = document.querySelector(".js-form-linkedin");
 const cardLinkedin = document.querySelector(".js-card-linkedin");
 const formGithub = document.querySelector(".js-form-github");
 const cardGithub = document.querySelector(".js-card-github");
+const formPhoto = document.querySelector(".js-form-photo img");
+const cardPhoto = document.querySelector(".js-card-image");
 
 
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
@@ -40,25 +53,35 @@ inputsFormFill.addEventListener("input", (event) => {
     // console.log ("Hola");
     if (event.target.id === "name") {
         cardName.innerHTML = event.target.value;
+        dataCard.name = event.target.value;
     } else if (event.target.id === "job") {
         cardJob.innerHTML = event.target.value;
+        dataCard.job = event.target.value;
     } else if (event.target.id === "email") {
         cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
-        cardEmail.title = formEmail.value; //pusimos la propiedad title en el HTML de los iconos que muestra el valor cuando haces hover
-    }else if (event.target.id === "telephone") {
+        cardEmail.title = formEmail.value;
+        dataCard.email = event.target.value;  //pusimos la propiedad title en el HTML de los iconos que muestra el valor cuando haces hover
+    } else if (event.target.id === "telephone") {
         cardTelephone.href = `tel: ${formTelephone.value}`;
-        cardTelephone.title =  formTelephone.value;
-    }else if (event.target.id === "linkedin") {
+        cardTelephone.title = formTelephone.value;
+        dataCard.telephone = event.target.value;
+    } else if (event.target.id === "linkedin") {
         cardLinkedin.href = `${formLinkedin.value}`;
         cardLinkedin.title = formLinkedin.value;
+        dataCard.linkedin = event.target.value;
     } else if (event.target.id === "github") {
         cardGithub.href = `${formGithub.value}`;
         cardGithub.title = formGithub.value;
-    }
+        dataCard.github = event.target.value;
+    } 
 }
-     
+
 );
 
+  
+
+//cardPhoto.src = `"${formPhoto.value}"`;
+        //dataCard.photo = event.target.value;        /
 // const cardIconEmail = document.querySelector(".js-icon-email");
 
 // cardIconEmail.addEventListener ("click", (event) =>{

@@ -132,10 +132,11 @@
               <label for="job" class="fill__label">Puesto</label>
               <input type="text" class=" fill__input js-form-job" id="job" placeholder=" Ej: Front-end unicorn">
     
-              <label for="image" class="fill__label">Imagen de perfil</label>
+              <label for="photo" class="fill__label form_photolabel js-form-photo">Imagen de perfil</label>
               <div class="div-buttons">
-              <span class="button-addimage">Añadir Imagen</span>
-              <span class="blank-square"></span>
+              <label for = "photo" class="button-addimage form__photobutton js__profile-trigger">Añadir Imagen</label>
+              <input class="form__photoinput js__profile-upload-btn" type="file" name="photo" id="photo">
+              <span class="blank-square form__photothumb js__profile-preview"><img src="" alt=""> </span>
               </div>
     
               <label for="email" class="fill__label">Email</label>
