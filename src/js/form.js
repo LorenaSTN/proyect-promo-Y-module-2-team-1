@@ -70,8 +70,6 @@ function handleHidingForm (event) {
     buttonArrow2.classList.toggle("rotate");
 };
 
-
-
 buttonArrow2.addEventListener("click", handleHidingForm)
 
 
