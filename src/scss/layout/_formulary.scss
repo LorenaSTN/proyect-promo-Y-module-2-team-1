@@ -36,15 +36,16 @@
     }
     }
 
-    // &_arrow {
-    //     padding: 10px ;
-    //     color: #54585a;
-    
-    // }
-
     }
-    
 
+.hiden {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+    
 
 //Parte diseño
 
@@ -52,7 +53,10 @@
     background-color: white;
     border: none;
     padding: 8px;
+    border-radius: 50px;
 }
+
+
 
 .title-colours {
     font-family: "Open Sans", sans-serif;
@@ -204,7 +208,9 @@
     }
 }
 
-
+.form__photoinput {
+    display: none;
+}
 
 ::placeholder {
     color:#c5c5c5;
@@ -225,6 +231,9 @@
     width: 30px;
     border: solid #a2deaf 1px;
     margin-left: 20px;
+    &img{
+        object-fit: cover;
+    } 
 }
 
 .div-buttons {

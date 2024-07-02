@@ -1,5 +1,16 @@
 'use strict';
 
+const dataCard =
+{
+    "palette": null,
+    "name": "",
+    "job": "",
+    "phone": "",
+    "email": "",
+    "linkedin": "",
+    "github": "",
+    "photo": "",
+}
 
 /* 
 El formulario se mostrarà en la tarjeta
@@ -9,16 +20,22 @@ El formulario se mostrarà en la tarjeta
 4-Iconos: Cuando la usuari@ haga click se redirigirá a un enlace.******
 */
 
-const formName = document.querySelector (".js-form-name");
-const cardName = document.querySelector (".js-card-name");
-const formJob = document.querySelector (".js-form-job");
-const cardJob = document.querySelector (".js-card-job");
-const formEmail = document.querySelector (".js-form-email");
-const cardEmail = document.querySelector (".js-card-email");
-const formTelephone = document.querySelector (".js-form-telephone");
-const cardTelephone = document.querySelector (".js-card-telephone");
+
+
+const formName = document.querySelector(".js-form-name");
+const cardName = document.querySelector(".js-card-name");
+const formJob = document.querySelector(".js-form-job");
+const cardJob = document.querySelector(".js-card-job");
+const formEmail = document.querySelector(".js-form-email");
+const cardEmail = document.querySelector(".js-card-email");
+const formTelephone = document.querySelector(".js-form-telephone");
+const cardTelephone = document.querySelector(".js-card-telephone");
 const formLinkedin = document.querySelector(".js-form-linkedin");
-const cardLinkedin = document.querySelector (".js-card-linkedin");
+const cardLinkedin = document.querySelector(".js-card-linkedin");
+const formGithub = document.querySelector(".js-form-github");
+const cardGithub = document.querySelector(".js-card-github");
+const formPhoto = document.querySelector(".js-form-photo img");
+const cardPhoto = document.querySelector(".js-card-image");
 
 
 /*  Si la usuaria escribe en el input de nombre, se ve visualizado en el preview card (en el nombre),
@@ -28,34 +45,73 @@ Si la usuaria escribe en el input de job/trabajo, se ve visualizado en el previe
 === / contenido y tipo de dato
 == / contenido
 
+
+
 iconos- href= 
 */
 
+const buttonArrow = document.querySelector(".js-button-arrow");
+const dropdown = document.querySelector(".js-dropdown");
+const buttonArrow2 = document.querySelector(".js-button-arrow2");
+const dropdown2 = document.querySelector(".js-dropdown2");
+
+
+// function de ocultar- no se porque no funciona?
+function handleHidingPalettes (event) {
+    event.preventDefault();
+    dropdown.classList.toggle("hiden");
+    buttonArrow.classList.toggle("rotate");
+};
+buttonArrow.addEventListener("click", handleHidingPalettes); 
+
+function handleHidingForm (event) {
+    event.preventDefault();
+    dropdown2.classList.toggle("hiden");
+    buttonArrow2.classList.toggle("rotate");
+};
+
+buttonArrow2.addEventListener("click", handleHidingForm)
+
+
+///////
+
+
 const inputsFormFill = document.querySelector(".js-form-fill");
 
-inputsFormFill.addEventListener("input",(event) => {
+inputsFormFill.addEventListener("input", (event) => {
     // event.preventDefault();
     // console.log ("Hola");
     if (event.target.id === "name") {
         cardName.innerHTML = event.target.value;
-    } else if (event.target.id === "job"){
+        dataCard.name = event.target.value;
+    } else if (event.target.id === "job") {
         cardJob.innerHTML = event.target.value;
-    } else if (event.target.id === "email"){
+        dataCard.job = event.target.value;
+    } else if (event.target.id === "email") {
         cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
-    }else if (event.target.id === "telephone") {
-        cardTelephone.href = `telf: ${formTelephone.value}`;
-    }else if (event.target.id === "linkedin") {
+        cardEmail.title = formEmail.value;
+        dataCard.email = event.target.value;  //pusimos la propiedad title en el HTML de los iconos que muestra el valor cuando haces hover
+    } else if (event.target.id === "telephone") {
+        cardTelephone.href = `tel: ${formTelephone.value}`;
+        cardTelephone.title = formTelephone.value;
+        dataCard.telephone = event.target.value;
+    } else if (event.target.id === "linkedin") {
         cardLinkedin.href = `${formLinkedin.value}`;
-    
-
-
-    }
-
-        
-
+        cardLinkedin.title = formLinkedin.value;
+        dataCard.linkedin = event.target.value;
+    } else if (event.target.id === "github") {
+        cardGithub.href = `${formGithub.value}`;
+        cardGithub.title = formGithub.value;
+        dataCard.github = event.target.value;
+    } 
 }
+
 );
 
+  
+
+//cardPhoto.src = `"${formPhoto.value}"`;
+        //dataCard.photo = event.target.value;        /
 // const cardIconEmail = document.querySelector(".js-icon-email");
 
 // cardIconEmail.addEventListener ("click", (event) =>{
@@ -71,7 +127,7 @@ inputsFormFill.addEventListener("input",(event) => {
 //         const emailInputValue = formEmail.value;
 //         emailInputValue = `mailto:${emailInputValue}`;
 //         window.location.href = emailInputValue; 
-        // cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
+// cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
 
 // formName.addEventListener ("input" , (event)=>{
 //     const value = event.target.value;

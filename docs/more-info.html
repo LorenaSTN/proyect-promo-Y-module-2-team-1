@@ -25,7 +25,7 @@
       src="https://kit.fontawesome.com/3c33987a45.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/main-f487fd58.css">
+    <link rel="stylesheet" href="./assets/main-fab4e451.css">
   </head>
 
   <body>
@@ -45,30 +45,30 @@
     </div>
 
     <div class="section-image">
-      <img class="imagen" src="./images/yesse.png" />
+      <img class="imagen js-card-image js__profile-image" src=""   />
     </div>
 
     <div class="icons">
       <div class="icon">
-        <a class=" js-card-telephone" href="#">
+        <a class=" js-card-telephone" href="#" target="_blank">
           <i class="fa-solid fa-mobile-screen-button"></i>
         </a>
       </div>
 
-      <div class="icon">
-        <a class=" js-card-email" href="#">
+      <div class="icon js-icon-email">
+        <a class=" js-card-email" href="#" target="_blank" title="">
           <i class="fa-regular fa-envelope"></i>
         </a>
       </div>
 
       <div class="icon">
-        <a class=" js-card-github" href="#">
+        <a class=" js-card-github" href="#" target="_blank" title="">
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
 
       <div class="icon">
-        <a class=" js-card-linkedin" href="#">
+        <a class=" js-card-linkedin" href="#" target="_blank" title="">
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
@@ -213,17 +213,18 @@
               <label for="job" class="fill__label">Puesto</label>
               <input type="text" class=" fill__input js-form-job" id="job" placeholder=" Ej: Front-end unicorn">
     
-              <label for="image" class="fill__label">Imagen de perfil</label>
+              <label for="photo" class="fill__label form_photolabel js-form-photo">Imagen de perfil</label>
               <div class="div-buttons">
-              <span class="button-addimage">Añadir Imagen</span>
-              <span class="blank-square"></span>
+              <label for = "photo" class="button-addimage form__photobutton js__profile-trigger">Añadir Imagen</label>
+              <input class="form__photoinput js__profile-upload-btn" type="file" name="photo" id="photo">
+              <span class="blank-square form__photothumb js__profile-preview"><img src="" alt=""> </span>
               </div>
     
               <label for="email" class="fill__label">Email</label>
               <input type="email" class=" fill__input js-form-email" id="email" placeholder=" Ej: sally-hill@gmail.com">
             
               <label for="telephone" class="fill__label">Teléfono</label>
-              <input type="number" class=" fill__input js-form-telephone" id="telephone" placeholder=" Ej: 555-55-55-55">
+              <input type="tel" class=" fill__input js-form-telephone" id="telephone" placeholder=" Ej: 555-55-55-55">
             
               <label for="linkedin" class="fill__label">Linkedin</label>
               <input type="text" class="fill__input js-form-linkedin" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill">
@@ -241,23 +242,37 @@
         </section>
         
         <section class="container-share">
-  <section class="">
-    <button class="button-share">
-      <i class="button-share__image fa-regular fa-address-card"></i>
-      <span>CREAR TARJETA</span>
-    </button>
-  </section>
-  <hr class="line" />
-  <section class="card-info">
-    <h3>La tarjeta ha sido creada:</h3>
-    <a class="card-info__link" href="">Link</a>
-    <button class="button-twitter">
-      <i class="fa-brands fa-twitter"></i>
-      <span> Compartir en Twitter</span>
-    </button>
-  </section>
+  <fieldset class="fieldset">
+    <div class="fieldset__main">
+      <div class="fieldset__div">
+        <i class="fa-solid fa-share-nodes fieldset__div_icon"></i>
+        <h2 class="fieldset__div_title">COMPARTE</h2>
+      </div>
+      <button class="button-options">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </div>
 
-  <hr class="line" />
+    <section class="share-wrapper">
+      <section class="">
+        <button class="button-share">
+          <i class="button-share__image fa-regular fa-address-card"></i>
+          <span>CREAR TARJETA</span>
+        </button>
+      </section>
+      <hr class="line" />
+      <section class="card-info">
+        <h3>La tarjeta ha sido creada:</h3>
+        <a class="card-info__link" href="">Link</a>
+        <button class="button-twitter">
+          <i class="fa-brands fa-twitter"></i>
+          <span> Compartir en Twitter</span>
+        </button>
+      </section>
+
+      <hr class="line" />
+    </section>
+  </fieldset>
 </section>
 
       </div>

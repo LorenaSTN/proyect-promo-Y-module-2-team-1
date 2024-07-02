@@ -64,10 +64,13 @@
   }
 }
 
-@media screen and (min-width: 768px){
-  .card-section{
+@media screen and (min-width: 768px) {
+  .card-section {
     display: flex;
     align-items: center;
     border-radius: 10px;
+  }
+  .button-element {
+    margin-top: 10px;
   }
 }
