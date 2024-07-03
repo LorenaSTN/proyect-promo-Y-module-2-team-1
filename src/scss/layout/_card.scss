@@ -34,8 +34,10 @@
 
   .nav-card {
     padding-left: 35px;
+    border-left: 5px #621d75 solid;
+    margin-top: 20px;
     &__title {
-      padding: 20px 0 7px 0;
+      padding-bottom: 7px;
       color: #621d75;
       font-family: $font-montserrat;
       font-size: 20px;
