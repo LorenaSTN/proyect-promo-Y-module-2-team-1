@@ -2,10 +2,10 @@
 footer{
     text-align: center;
     border-top:solid 1px #d4cece;
-    height: 25vh;
     background-color: white;
-    
+    height: 180px;
 }
+
 .awesome1{
     font-family:'Open Sans', sans-serif;
     font-weight: 300;
@@ -18,15 +18,17 @@ footer{
 }
 .image1{
     width:120px;
-    margin:-30px;
+    
 }
 @media all and (min-width:768px) {
-    footer{
-        border-top:solid 1px #d4cece; 
+    footer {
+        height: 110px;
+       
     }
     .foot{
         display:flex;
         justify-content: space-between; 
+        align-items: center;
         padding-top: 10px;
     }
     .awesome1{
@@ -37,15 +39,15 @@ footer{
         margin: none;
     }
     .image1{
-        max-height: 40px; 
-        width: auto;
-        padding-right: 25px;
+        width: 120px;
+       
     }
 }
 @media all and (min-width: 1200px) {
-    footer{
-        border-top:solid 1px #d4cece; 
+    footer {
+        height: 100px;
     }
+
     .foot{
         display:flex;
         justify-content: space-between; 
@@ -59,8 +61,7 @@ footer{
         margin:10px;
     }
     .image1{
-        max-height: 40px; 
-        width: auto;
+        width: 120px;
         padding-right: 25px;
     }
 }
