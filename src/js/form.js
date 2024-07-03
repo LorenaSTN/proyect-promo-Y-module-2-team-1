@@ -54,6 +54,8 @@ const buttonArrow = document.querySelector(".js-button-arrow");
 const dropdown = document.querySelector(".js-dropdown");
 const buttonArrow2 = document.querySelector(".js-button-arrow2");
 const dropdown2 = document.querySelector(".js-dropdown2");
+const buttonArrow3 = document.querySelector(".js-button-arrow3");
+const dropdown3 = document.querySelector(".js-dropdown3");
 
 
 // function de ocultar- no se porque no funciona?
@@ -71,6 +73,15 @@ function handleHidingForm (event) {
 };
 
 buttonArrow2.addEventListener("click", handleHidingForm)
+
+
+function handleHidingShare (event){
+    event.preventDefault();
+    dropdown3.classList.toggle("hiden");
+    buttonArrow3.classList.toggle("rotate");
+};
+
+buttonArrow3.addEventListener("click", handleHidingShare);
 
 
 ///////
