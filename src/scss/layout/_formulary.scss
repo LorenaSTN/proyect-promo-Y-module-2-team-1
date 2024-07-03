@@ -38,9 +38,7 @@
 
     }
 
-.hiden {
-    display: none;
-}
+
 
 .rotate {
     transform: rotate(180deg);
@@ -232,7 +230,7 @@
     border: solid #a2deaf 1px;
     margin-left: 20px;
     &img{
-        object-fit: cover;
+        width: 100%;
     } 
 }
 
@@ -240,7 +238,9 @@
     display: flex;
 }
 
-
+.hiden {
+    display: none;
+}
 
 
 
