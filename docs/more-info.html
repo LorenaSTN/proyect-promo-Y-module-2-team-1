@@ -25,7 +25,7 @@
       src="https://kit.fontawesome.com/3c33987a45.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/main-4d763e40.css">
+    <link rel="stylesheet" href="./assets/main-6e923eaa.css">
   </head>
 
   <body>
@@ -33,7 +33,7 @@
       <section class="card-section">
  <div class="card-wrapper">
   <div class="button-element">
-    <button class="button-element__button">
+    <button class="button-element__button js-button-reset">
       <i class="fa-solid fa-trash"></i> RESET
     </button>
   </div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="section-image">
-      <img class="imagen js-card-image js__profile-image" src=""   />
+      <img class="imagen js-card-image js__profile-image" src="./images/images/cuyito.jpg"   />
     </div>
 
     <div class="icons">
@@ -103,7 +103,8 @@
                     id="colours1"
                     type="radio"
                     value="colours1"
-                    name="colours">
+                    name="colours"
+                    checked>
     
                     <div class="options">
                     <div class="divcol col1__1"></div> 
@@ -209,10 +210,10 @@
     
             <div class="fill js-form-fill js-dropdown2">
               <label for="name" class="fill__label">Nombre Completo</label>
-              <input type="text" class=" fill__input js-form-name" id="name" placeholder=" Ej: Sally Jill">
+              <input type="text" class=" fill__input js-form-name" id="name" placeholder=" Ej: Sally Jill" required>
     
               <label for="job" class="fill__label">Puesto</label>
-              <input type="text" class=" fill__input js-form-job" id="job" placeholder=" Ej: Front-end unicorn">
+              <input type="text" class=" fill__input js-form-job" id="job" placeholder=" Ej: Front-end unicorn" required>
     
               <label for="photo" class="fill__label form_photolabel js-form-photo">Imagen de perfil</label>
               <div class="div-buttons">
@@ -222,16 +223,16 @@
               </div>
     
               <label for="email" class="fill__label">Email</label>
-              <input type="email" class=" fill__input js-form-email" id="email" placeholder=" Ej: sally-hill@gmail.com">
+              <input type="email" class=" fill__input js-form-email" id="email" placeholder=" Ej: sally-hill@gmail.com" required>
             
               <label for="telephone" class="fill__label">Teléfono</label>
-              <input type="tel" class=" fill__input js-form-telephone" id="telephone" placeholder=" Ej: 555-55-55-55">
+              <input type="tel" class=" fill__input js-form-telephone" id="telephone" placeholder=" Ej: 555-55-55-55" required>
             
               <label for="linkedin" class="fill__label">Linkedin</label>
-              <input type="text" class="fill__input js-form-linkedin" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill">
+              <input type="text" class="fill__input js-form-linkedin" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill" required>
     
               <label for="github" class="fill__label">Github</label>
-              <input type="text" class="fill__input js-form-github" id="github" placeholder=" Ej: @sally-hill">
+              <input type="text" class="fill__input js-form-github" id="github" placeholder=" Ej: @sally-hill" required>
             
             </div>
           </fieldset>
@@ -278,6 +279,12 @@
 
       </div>
     </main>
+    <footer>
+    <div class="foot">
+        <p class="awesome1">Cardscript Dynamite © 2024</p>
+            <img class="image1" src="./images/logo.png">
+    </div>
+</footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
