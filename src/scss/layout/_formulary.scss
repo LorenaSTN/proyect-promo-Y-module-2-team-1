@@ -100,22 +100,7 @@
 
 .col1 {
     &__1{
-        background-color: #114e4e;
-    }
-
-    &__2 {
-        background-color: #438792;
-    }
-
-    &__3 {
-        background-color: #a2deaf;
-    }
-}
-
-
-.col2 {
-    &__1 {
-        background-color: #420101;
+        background-color: #3b0517;
     }
 
     &__2 {
@@ -127,17 +112,32 @@
     }
 }
 
-.col3 {
+
+.col2 {
     &__1 {
-        background-color: #3e5b65;
+        background-color: #e05b09;
     }
 
     &__2 {
-        background-color: #eab052;
+        background-color: #F99A54
     }
 
     &__3 {
-        background-color: #a0c0cf;
+        background-color: #fadbb0;
+    }
+}
+
+.col3 {
+    &__1 {
+        background-color: #114e4e;
+    }
+
+    &__2 {
+        background-color: #438792;
+    }
+
+    &__3 {
+        background-color: #a2deaf;
     }
 }
 
@@ -169,19 +169,6 @@
     }
 }
 
-.col6 {
-    &__1 {
-        background-color: #e05b09;
-    }
-
-    &__2 {
-        background-color: #F99A54
-    }
-
-    &__3 {
-        background-color: #fadbb0;
-    }
-}
 
 
 
