@@ -34,11 +34,11 @@
 
   .nav-card {
     padding-left: 35px;
-    border-left: 5px #621d75 solid;
+    border-left: 5px #bd1010 solid;
     margin-top: 20px;
     &__title {
       padding-bottom: 7px;
-      color: #621d75;
+      color: #3b0517;
       font-family: "Montserrat";
       font-size: 20px;
       font-weight: 800;
@@ -65,7 +65,7 @@
       height: 37px;
       width: 37px;
       border-radius: 100%;
-      border: 2.5px solid #621d75;
+      border: 2.5px solid #e07b59;
       padding: 5px;
       display: flex;
       justify-content: center;
@@ -73,6 +73,10 @@
       font-size: 18px;
     }
   }
+}
+
+.icons1 {
+  color: #e07b59;
 }
 
 @media screen and (min-width: 768px) {
