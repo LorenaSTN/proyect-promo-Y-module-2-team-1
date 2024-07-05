@@ -83,7 +83,7 @@
     height: 25px;
 }
 
-.input {
+.input_col{
     height: 30px;
     margin-right: 15px;
 }
@@ -230,5 +230,78 @@
     display: none;
 }
 
+/////Paletas clases
 
-
+.jscolour1{
+    &__1{
+        color: #3b0517 ; 
+    }
+  
+    &__2 {
+       color: #bd1010;
+    }
+  
+    &__3 {
+        color: #e07b59;
+    }
+  }
+  
+  
+  .jscolour2{
+    &__1 {
+        color: #e05b09; 
+    }
+  
+    &__2 {
+        color: #F99A54
+    }
+  
+    &__3 {
+        color: #fadbb0;
+    }
+  }
+  
+  .jscolour3 {
+    &__1 {
+        color: #114e4e;
+    }
+  
+    &__2 {
+        color: #438792;
+    }
+  
+    &__3 {
+        color: #a2deaf;
+    }
+  }
+  
+  .jscolour4 {
+    &__1 {
+        background-color: #480745;
+    }
+  
+    &__2 {
+        background-color: #b400ae; 
+    }
+  
+    &__3 {
+        background-color: #ffbaf4; 
+    }
+  }
+  
+  .jscolour5 {
+    &__1 {
+        background-color: #040d43;
+    }
+  
+    &__2 {
+        background-color: #256196;
+    }
+  
+    &__3 {
+        background-color: #79ace7;
+    }
+  }
+  
+  
+  
