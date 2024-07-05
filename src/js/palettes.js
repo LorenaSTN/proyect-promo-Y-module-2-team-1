@@ -25,8 +25,16 @@ function handlePalettes() {
         if (option.checked) {
             if (option.value === "colours1") {
                 nameCard.classList.add("jscolour1__1");
+                emailCard.classList.add("jscolour1__3");
+                telephoneCard.classList.add("jscolour1__3");
+                linkedinCard.classList.add("jscolour1__3");
+                GithubCard.classList.add("jscolour1__3");
             } else if (option.value === "colours2") {
                 nameCard.classList.add("jscolour2__1");
+                emailCard.classList.add("jscolour2__3");
+                telephoneCard.classList.add("jscolour2__3");
+                linkedinCard.classList.add("jscolour2__3");
+                GithubCard.classList.add("jscolour2__3");
             } else if (option.value === "colours3") {
                 nameCard.classList.add("jscolour3__1");
             }
