@@ -55,7 +55,7 @@ const buttonArrow3 = document.querySelector(".js-button-arrow3");
 const dropdown3 = document.querySelector(".js-dropdown3");
 
 
-dropdown.classList.add("hiden");
+// dropdown.classList.add("hiden");
 dropdown2.classList.add("hiden");
 dropdown3.classList.add("hiden");
 // function de ocultar- no se porque no funciona?
