@@ -16,6 +16,13 @@ const linkedinCard = document.querySelector(".js-card-linkedin");
 const GithubCard = document.querySelector(".js-card-github");
 
 
+// const palettes = {
+//     colours1: [".jscolour1__1", ".jscolour1__3", ".jscolour1__3"],
+//     colours2: [".jscolour2__1", ".jscolour2__3", ".jscolour2__3"],
+//     colours3: [".jscolour3__1", ".jscolour3__2", ".jscolour3__3"]
+// };
+
+
 
 function handlePalettes() {
     console.log("Se ha seleccionado una opción de color");
