@@ -174,3 +174,11 @@ function handleResetClick() {
 }
 
 resetButton.addEventListener("click", handleResetClick);
+
+const buttonShare = document.querySelector('button.button-share');
+
+buttonShare.addEventListener('click', () => {
+  dropdown.classList.remove('hiden');
+  dropdown2.classList.remove('hiden');
+  dropdown3.classList.remove('hiden');
+});
