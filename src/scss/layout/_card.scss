@@ -1,7 +1,8 @@
 .card-section {
   padding: 30px 50px;
-  background-image: url('/images/wallpaper.jpeg');
-  background-size: cover;
+  background-color: rgb(231, 231, 231);
+  // background-image: url('/images/wallpaper.jpeg');
+  // background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,11 +36,11 @@
 
   .nav-card {
     padding-left: 35px;
-    border-left: 5px #bd1010 solid;
+    border-left: 5px #a22923 solid;
     margin-top: 20px;
     &__title {
       padding-bottom: 7px;
-      color: #3b0517;
+      color: #1b1010;
       font-family: "Montserrat";
       font-size: 20px;
       font-weight: 800;
@@ -66,7 +67,7 @@
       height: 37px;
       width: 37px;
       border-radius: 100%;
-      border: 2.5px solid #e07b59;
+      border: 2.5px solid#d5c3cf; 
       padding: 5px;
       display: flex;
       justify-content: center;
@@ -78,7 +79,7 @@
 
 
 .icons1 {
-  color: #e07b59;
+  color: #d5c3cf; 
 }
 
 

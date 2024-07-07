@@ -99,79 +99,65 @@
 
 
 .col1 {
-    &__1{
-        background-color: #3b0517;
+    &__1 {
+        background-color: #1b1010;
     }
 
     &__2 {
-        background-color: #bd1010;
+        background-color: #a22923; 
     }
 
     &__3 {
-        background-color: #e07b59;
+        background-color:  #d5c3cf; 
     }
 }
 
 
 .col2 {
     &__1 {
-        background-color: #e05b09;
+        background-color: #009a67;
     }
 
     &__2 {
-        background-color: #F99A54
+        background-color: #c50000;
     }
 
     &__3 {
-        background-color: #fadbb0;
+        background-color: #1b60d6;
     }
 }
 
 .col3 {
     &__1 {
-        background-color: #114e4e;
+        background-color: rgb(0, 0, 0);
     }
 
     &__2 {
-        background-color: #438792;
+        background-color:  rgb(232, 232, 232);
     }
 
     &__3 {
-        background-color: #a2deaf;
+        background-color:  rgb(171, 171, 171);
     }
-}
-
-.col4 {
-    &__1 {
-        background-color: #480745;
     }
 
-    &__2 {
-        background-color: #b400ae; 
-    }
-
-    &__3 {
-        background-color: #ffbaf4; 
-    }
-}
-
-.col5 {
-    &__1 {
-        background-color: #040d43;
-    }
-
-    &__2 {
-        background-color: #256196;
-    }
-
-    &__3 {
-        background-color: #79ace7;
-    }
-}
+// .col4 {
+//     &__1 {
+//             background-color: #4b0040;
+//     }
+    
+//     &__2 {
+//             background-color: #83548a
+//     }
+    
+//     &__3 {
+//             background-color: #f3d1f3;
+//         }
+//     }
 
 
 
-
+ 
 //Parte formulario
 
 .fill {
@@ -234,74 +220,76 @@
 
 .jscolour1{
     &__1{
-        color: #3b0517 ; 
+        color:#1b1010;
     }
   
     &__2 {
-       color: #bd1010;
+       color: #a22923; 
     }
   
     &__3 {
-        color: #e07b59;
+        color: #d5c3cf; 
     }
   }
   
   
   .jscolour2{
     &__1 {
-        color: #e05b09; 
+        color:#009a67;
     }
   
     &__2 {
-        color: #F99A54;
+        color: #c50000;
     }
   
     &__3 {
-        color: #fadbb0;
+        color:  #1b60d6;
     }
   }
   
   .jscolour3 {
     &__1 {
-        color: #114e4e;
+        color:rgb(0, 0, 0);
     }
-  
+    
     &__2 {
-        color: #438792;
+        color:  rgb(232, 232, 232);
     }
-  
+    
     &__3 {
-        color: #a2deaf;
+        color:rgb(171, 171, 171);
     }
   }
+
+
   
-  .jscolour4 {
-    &__1 {
-        background-color: #480745;
-    }
+//   .jscolour4 {
+//     &__1 {
+//         background-color: #480745;
+//     }
   
-    &__2 {
-        background-color: #b400ae; 
-    }
+//     &__2 {
+//         background-color: #b400ae; 
+//     }
   
-    &__3 {
-        background-color: #ffbaf4; 
-    }
-  }
+//     &__3 {
+//         background-color: #ffbaf4; 
+//     }
+//   }
   
-  .jscolour5 {
-    &__1 {
-        background-color: #040d43;
-    }
+//   .jscolour5 {
+//     &__1 {
+//         background-color: #040d43;
+//     }
   
-    &__2 {
-        background-color: #256196;
-    }
+//     &__2 {
+//         background-color: #256196;
+//     }
   
-    &__3 {
-        background-color: #79ace7;
-    }
-  }
+//     &__3 {
+//         background-color: #79ace7;
+//     }
+//   }
   
   
   
