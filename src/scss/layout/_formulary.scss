@@ -115,17 +115,19 @@
 
 .col2 {
     &__1 {
-        background-color: #009a67;
-    }
+        background-color:  #21aa51;
+}
 
-    &__2 {
-        background-color: #c50000;
-    }
+&__2 {
+        background-color:#8e21bc;
+}
 
-    &__3 {
-        background-color: #1b60d6;
+&__3 {
+        background-color: #f3ae2f;
     }
 }
+
+
 
 .col3 {
     &__1 {
@@ -141,21 +143,20 @@
     }
     }
 
-// .col4 {
-//     &__1 {
-//             background-color: #4b0040;
-//     }
-    
-//     &__2 {
-//             background-color: #83548a
-//     }
-    
-//     &__3 {
-//             background-color: #f3d1f3;
-//         }
-//     }
+.col4 {
 
+    &__1 {
+        background-color: #009a67;
+    }
 
+    &__2 {
+        background-color: #c50000;
+    }
+
+    &__3 {
+        background-color: #1b60d6;
+    }
+}
 
  
 //Parte formulario
