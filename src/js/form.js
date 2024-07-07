@@ -118,6 +118,7 @@ inputsFormFill.addEventListener("input", (event) => {
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
   }
+
 });
 
 //cardPhoto.src = `"${formPhoto.value}"`;
