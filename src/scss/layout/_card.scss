@@ -1,8 +1,7 @@
 .card-section {
   padding: 30px 50px;
   background-color: rgb(231, 231, 231);
-  // background-image: url('/images/wallpaper.jpeg');
-  // background-size: cover;
+  background-size: cover 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +66,7 @@
       height: 37px;
       width: 37px;
       border-radius: 100%;
-      border: 2.5px solid#d5c3cf; 
+      border: 2.5px solid#d5c3cf;
       padding: 5px;
       display: flex;
       justify-content: center;
@@ -79,7 +78,7 @@
 
 
 .icons1 {
-  color: #d5c3cf; 
+  color: #d5c3cf;
 }
 
 
