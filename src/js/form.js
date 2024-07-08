@@ -160,8 +160,8 @@ function handleResetClick() {
     input.value = "";
   }
 
-  cardName.innerHTML = "Nombre Apellido";
-  cardJob.innerHTML = "Front-end developer";
+  cardName.innerHTML = "Harley Quinn";
+  cardJob.innerHTML = "Joker";
   cardEmail.href = "";
   cardEmail.title = "";
   cardTelephone.href = "";
@@ -170,7 +170,7 @@ function handleResetClick() {
   cardLinkedin.title = "";
   cardGithub.href = "";
   cardGithub.title = "";
-  profileImage.src = "./images/images/cuyito.jpg";
+  profileImage.src = "./images/joker.jpg";
   profilePreview.src = "";
 }
 
