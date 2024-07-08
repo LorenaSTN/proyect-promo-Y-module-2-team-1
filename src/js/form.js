@@ -50,16 +50,19 @@ function handleCollapsable(event){
     dropdown.classList.toggle("hiden");
     dropdown2.classList.add("hiden");
     dropdown3.classList.add("hiden");
+    buttonArrow.classList.toggle("rotate");
   }else if (clickedLegend.classList.contains("js-fieldset-fill")){
     dropdown2.classList.toggle("hiden");
     dropdown.classList.add("hiden");
     dropdown3.classList.add("hiden");
+    buttonArrow2.classList.toggle("rotate");
   }else if (clickedLegend.classList.contains ("js-fieldset-share")){
     event.preventDefault();
     dropdown3.classList.toggle("hiden");
-    buttonArrow3.classList.toggle("rotate");
     dropdown.classList.add("hiden");
     dropdown2.classList.add("hiden");
+    buttonArrow3.classList.toggle("rotate");
+
   };
 };
 
