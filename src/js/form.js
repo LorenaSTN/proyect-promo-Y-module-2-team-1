@@ -118,6 +118,7 @@ inputsFormFill.addEventListener("input", (event) => {
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
   }
+
 });
 
 //cardPhoto.src = `"${formPhoto.value}"`;
@@ -174,3 +175,25 @@ function handleResetClick() {
 }
 
 resetButton.addEventListener("click", handleResetClick);
+
+const buttonShare = document.querySelector('button.button-share');
+
+buttonShare.addEventListener('click', () => {
+  dropdown.classList.remove('hiden');
+  dropdown2.classList.remove('hiden');
+  dropdown3.classList.remove('hiden');
+});
+
+const shareSection = document.querySelector('section.card-info');
+const myForm = document.querySelector('form');
+
+myForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  dropdown.classList.add('hiden');
+  dropdown2.classList.add('hiden');
+  dropdown3.classList.remove('hiden');
+
+  // TODO: Crear la tarjeta
+
+  shareSection.classList.remove('hiden');
+});
