@@ -10,47 +10,53 @@ se actualiza con los colores de esa opcion
 */
 const options = document.querySelectorAll('input[name="colours"]');
 const nameCard = document.querySelector(".js-card-name");
+const navCard = document.querySelector(".nav-card");
 const emailCard = document.querySelector(".js-card-email");
 const telephoneCard = document.querySelector(".js-card-telephone");
 const linkedinCard = document.querySelector(".js-card-linkedin");
 const GithubCard = document.querySelector(".js-card-github");
 
-
-// const palettes = {
-//     colours1: [".jscolour1__1", ".jscolour1__3", ".jscolour1__3"],
-//     colours2: [".jscolour2__1", ".jscolour2__3", ".jscolour2__3"],
-//     colours3: [".jscolour3__1", ".jscolour3__2", ".jscolour3__3"]
-// };
-
-
-
-function handlePalettes() {
-    console.log("Se ha seleccionado una opción de color");
-
-    
-    options.forEach(option => {
-        if (option.checked) {
-            if (option.value === "colours1") {
-                nameCard.classList.add("jscolour1__1");
-                emailCard.classList.add("jscolour1__3");
-                telephoneCard.classList.add("jscolour1__3");
-                linkedinCard.classList.add("jscolour1__3");
-                GithubCard.classList.add("jscolour1__3");
-            } else if (option.value === "colours2") {
-                nameCard.classList.add("jscolour2__1");
-                emailCard.classList.add("jscolour2__3");
-                telephoneCard.classList.add("jscolour2__3");
-                linkedinCard.classList.add("jscolour2__3");
-                GithubCard.classList.add("jscolour2__3");
-            } else if (option.value === "colours3") {
-                nameCard.classList.add("jscolour3__1");
-            }
-        }
-    })
+const palettes = {
+  colours1: ["jscolour1__1", "jscolour1__2", "jscolour1__3"],
+  colours2: ["jscolour2__1", "jscolour2__2", "jscolour2__3"],
+  colours3: ["jscolour3__1", "jscolour3__2", "jscolour3__3"],
+  colours4: ["jscolour4__1", "jscolour4__2", "jscolour4__3"],
+  colours5: ["jscolour5__1", "jscolour5__2", "jscolour5__3"],
 };
 
-options.forEach(option => {
-    option.addEventListener("change", handlePalettes);
+function handlePalettes() {
+  console.log("Se ha seleccionado una opción de color");
+  const paletteName = document.querySelector(
+    'input[name="colours"]:checked'
+  ).value; //colours1, colours2, colours3, colours4, colours5
+
+  const palette = palettes[paletteName];
+
+  nameCard.classList.remove(nameCard.classList[nameCard.classList.length - 1]);
+  navCard.classList.remove(navCard.classList[navCard.classList.length - 1]);
+  emailCard.classList.remove(
+    emailCard.classList[emailCard.classList.length - 1]
+  );
+  telephoneCard.classList.remove(
+    telephoneCard.classList[telephoneCard.classList.length - 1]
+  );
+  linkedinCard.classList.remove(
+    linkedinCard.classList[linkedinCard.classList.length - 1]
+  );
+  GithubCard.classList.remove(
+    GithubCard.classList[GithubCard.classList.length - 1]
+  );
+
+  nameCard.classList.add(palette[0]);
+  navCard.classList.add(palette[1]);
+  emailCard.classList.add(palette[2]);
+  telephoneCard.classList.add(palette[2]);
+  linkedinCard.classList.add(palette[2]);
+  GithubCard.classList.add(palette[2]);
+}
+
+options.forEach((option) => {
+  option.addEventListener("change", handlePalettes);
 });
 
 handlePalettes();

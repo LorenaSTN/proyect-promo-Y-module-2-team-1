@@ -1,307 +1,299 @@
 .section-form {
-    padding: 10px;
-    border-bottom: solid #d8d8d8 1px ;
-    cursor:pointer;
-    
-
+  padding: 10px;
+  border-bottom: solid #d8d8d8 1px;
+  cursor: pointer;
 }
 
 //Parte maquetación para las tres partes
 
 .fieldset {
-    border: none;
-    width: 100%;
+  border: none;
+  width: 100%;
 
-    &__main {
-        display: flex;
-        justify-content: space-between;
-    }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
 
-     &__div {
-     display: flex;
-
+  &__div {
+    display: flex;
 
     &_icon {
-        padding: 7px;
-        color: $color-title;
-
+      padding: 7px;
+      color: $color-title;
     }
 
     &_title {
-        width: 25%;
-        color: $secondary-color;
-        font-family: $font-secondary;
-        font-size: 18px;
-        font-weight: 600;
-        padding-top: 6px;
+      width: 25%;
+      color: $secondary-color;
+      font-family: $font-secondary;
+      font-size: 18px;
+      font-weight: 600;
+      padding-top: 6px;
     }
-    }
-
-    }
-
-
+  }
+}
 
 .rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-    
 
 //Parte diseño
 
 .button-options {
-    background-color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 50px;
+  background-color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50px;
 }
-
-
 
 .title-colours {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    color: #54585a;
-    margin-left: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #54585a;
+  margin-left: 15px;
 }
-
 
 .colours {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 
-    &__options {
-        margin-right: 10px;
-        margin-top: 5px;
-    }
-
+  &__options {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
 }
-
 
 .divcol {
-    width: 30px;
-    height: 25px;
+  width: 30px;
+  height: 25px;
 }
 
-.input_col{
-    height: 30px;
-    margin-right: 15px;
+.input_col {
+  height: 30px;
+  margin-right: 15px;
 }
 
 .label-colours {
-    display: flex;
+  display: flex;
 }
 
 .options {
-    display: flex;
+  display: flex;
 }
-
-
 
 .col1 {
-    &__1{
-        background-color: #3b0517;
-    }
+  &__1 {
+    background-color: #3b0517;
+  }
 
-    &__2 {
-        background-color: #bd1010;
-    }
+  &__2 {
+    background-color: #bd1010;
+  }
 
-    &__3 {
-        background-color: #e07b59;
-    }
+  &__3 {
+    background-color: #e07b59;
+  }
 }
 
-
 .col2 {
-    &__1 {
-        background-color: #e05b09;
-    }
+  &__1 {
+    background-color: #e05b09;
+  }
 
-    &__2 {
-        background-color: #F99A54
-    }
+  &__2 {
+    background-color: #f99a54;
+  }
 
-    &__3 {
-        background-color: #fadbb0;
-    }
+  &__3 {
+    background-color: #fadbb0;
+  }
 }
 
 .col3 {
-    &__1 {
-        background-color: #114e4e;
-    }
+  &__1 {
+    background-color: #114e4e;
+  }
 
-    &__2 {
-        background-color: #438792;
-    }
+  &__2 {
+    background-color: #438792;
+  }
 
-    &__3 {
-        background-color: #a2deaf;
-    }
+  &__3 {
+    background-color: #a2deaf;
+  }
 }
 
 .col4 {
-    &__1 {
-        background-color: #480745;
-    }
+  &__1 {
+    background-color: #480745;
+  }
 
-    &__2 {
-        background-color: #b400ae; 
-    }
+  &__2 {
+    background-color: #b400ae;
+  }
 
-    &__3 {
-        background-color: #ffbaf4; 
-    }
+  &__3 {
+    background-color: #ffbaf4;
+  }
 }
 
 .col5 {
-    &__1 {
-        background-color: #040d43;
-    }
+  &__1 {
+    background-color: #040d43;
+  }
 
-    &__2 {
-        background-color: #256196;
-    }
+  &__2 {
+    background-color: #256196;
+  }
 
-    &__3 {
-        background-color: #79ace7;
-    }
+  &__3 {
+    background-color: #79ace7;
+  }
 }
-
-
-
 
 //Parte formulario
 
 .fill {
-    padding: 10px;
-    margin-left: 5px;
-    display: flex;
-    flex-direction: column;
+  padding: 10px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
 
-    &__label{
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        color: #114e4e;
-        margin-bottom: 10px;
-        margin-top: 15px;
-    } 
+  &__label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #114e4e;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
 
-    &__input {
-        border: solid #a2deaf 1px;
-        height: 30px;
-    }
+  &__input {
+    border: solid #a2deaf 1px;
+    height: 30px;
+  }
 }
 
 .form__photoinput {
-    display: none;
+  display: none;
 }
 
 ::placeholder {
-    color:#c5c5c5;
+  color: #c5c5c5;
 }
 
 .button-addimage {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    background-color: #e17334;
-    color: white;
-    padding: 6px;
-    text-align: center;
-    width: 140px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background-color: #e17334;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  width: 140px;
 }
 
 .blank-square {
-    height: 30px;
-    width: 30px;
-    border: solid #a2deaf 1px;
-    margin-left: 20px;
-    img{
-        width: 100%;
-    } 
+  height: 30px;
+  width: 30px;
+  border: solid #a2deaf 1px;
+  margin-left: 20px;
+  img {
+    width: 100%;
+  }
 }
 
 .div-buttons {
-    display: flex;
+  display: flex;
 }
 
 .hiden {
-    display: none;
+  display: none;
 }
 
 /////Paletas clases
 
-.jscolour1{
-    &__1{
-        color: #3b0517 ; 
-    }
-  
-    &__2 {
-       color: #bd1010;
-    }
-  
-    &__3 {
-        color: #e07b59;
+.jscolour1 {
+  &__1 {
+    color: #3b0517;
+  }
+
+  &__2 {
+    border-color: #bd1010;
+  }
+
+  &__3 {
+    border-color: #e07b59;
+    i {
+      color: #e07b59;
     }
   }
-  
-  
-  .jscolour2{
-    &__1 {
-        color: #e05b09; 
-    }
-  
-    &__2 {
-        color: #F99A54;
-    }
-  
-    &__3 {
-        color: #fadbb0;
+}
+
+.jscolour2 {
+  &__1 {
+    color: #e05b09;
+  }
+
+  &__2 {
+    border-color: #f99a54;
+  }
+
+  &__3 {
+    border-color: #fadbb0;
+    i {
+      color: #fadbb0;
     }
   }
-  
-  .jscolour3 {
-    &__1 {
-        color: #114e4e;
-    }
-  
-    &__2 {
-        color: #438792;
-    }
-  
-    &__3 {
-        color: #a2deaf;
+}
+
+.jscolour3 {
+  &__1 {
+    color: #114e4e;
+  }
+
+  &__2 {
+    border-color: #438792;
+  }
+
+  &__3 {
+    border-color: #a2deaf;
+    i {
+      color: #a2deaf;
     }
   }
-  
-  .jscolour4 {
-    &__1 {
-        background-color: #480745;
-    }
-  
-    &__2 {
-        background-color: #b400ae; 
-    }
-  
-    &__3 {
-        background-color: #ffbaf4; 
+}
+
+.jscolour4 {
+  &__1 {
+    color: #480745;
+  }
+
+  &__2 {
+    border-color: #b400ae;
+  }
+
+  &__3 {
+    border-color: #ffbaf4;
+    i {
+      color: #ffbaf4;
     }
   }
-  
-  .jscolour5 {
-    &__1 {
-        background-color: #040d43;
-    }
-  
-    &__2 {
-        background-color: #256196;
-    }
-  
-    &__3 {
-        background-color: #79ace7;
+}
+
+.jscolour5 {
+  &__1 {
+    color: #040d43;
+  }
+
+  &__2 {
+    border-color: #256196;
+  }
+
+  &__3 {
+    border-color: #79ace7;
+    i {
+      color: #79ace7;
     }
   }
-  
-  
-  
+}
