@@ -21,7 +21,6 @@ const palettes = {
   colours2: ["jscolour2__1", "jscolour2__2", "jscolour2__3"],
   colours3: ["jscolour3__1", "jscolour3__2", "jscolour3__3"],
   colours4: ["jscolour4__1", "jscolour4__2", "jscolour4__3"],
-  colours5: ["jscolour5__1", "jscolour5__2", "jscolour5__3"],
 };
 
 function handlePalettes() {

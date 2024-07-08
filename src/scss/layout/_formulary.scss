@@ -100,7 +100,7 @@
 
 .col1 {
     &__1 {
-        background-color: #1b1010;
+      background-color: #1b1010;
     }
 
     &__2 {
@@ -224,78 +224,78 @@
 
 /////Paletas clases
 
-.jscolour1{
-    &__1{
-        color:#1b1010;
-    }
-  
-    &__2 {
-       color: #a22923; 
-    }
-  
-    &__3 {
-        color: #d5c3cf; 
-    }
-  }
-  
-  
-  .jscolour2{
-    &__1 {
-        color:#009a67;
-    }
-  
-    &__2 {
-        color: #c50000;
-    }
-  
-    &__3 {
-        color:  #1b60d6;
-    }
-  }
-  
-  .jscolour3 {
-    &__1 {
-        color:rgb(0, 0, 0);
-    }
-    
-    &__2 {
-        color:  rgb(232, 232, 232);
-    }
-    
-    &__3 {
-        color:rgb(171, 171, 171);
-    }
+.jscolour1 {
+  &__1 {
+    color: #1b1010;
   }
 
+  &__2 {
+      border-color: #a22923; 
+  }
 
+  &__3 {
+      border-color:  #d5c3cf; 
+      i{
+        color: #d5c3cf;
+      }
+  }
+}
+
+
+.jscolour2 {
+  &__1 {
+      color: #64c949;
+}
+
+&__2 {
+      border-color:#8600a1;
+}
+
+&__3 {
+      border-color: #f3ae2f;
+      i{
+        color:#f3ae2f;
+      }
+  }
+}
+
+
+
+.jscolour3 {
+  &__1 {
+      color: #c50000;
+  }
+
+  &__2 {
+      border-color: #f4f0a5;
+  }
+
+  &__3 {
+      border-color: #1b60d6;
+      i{
+       color:  #1b60d6;
+      }
+  }
+}
+
+
+.jscolour4 {
+
+  &__1 {
+      color: #6a0d18;
+  }
   
-//   .jscolour4 {
-//     &__1 {
-//         background-color: #480745;
-//     }
+  &__2 {
+      border-color:  #ff9821;
+  }
   
-//     &__2 {
-//         background-color: #b400ae; 
-//     }
-  
-//     &__3 {
-//         background-color: #ffbaf4; 
-//     }
-//   }
-  
-//   .jscolour5 {
-//     &__1 {
-//         background-color: #040d43;
-//     }
-  
-//     &__2 {
-//         background-color: #256196;
-//     }
-  
-//     &__3 {
-//         background-color: #79ace7;
-//     }
-//   }
+  &__3 {
+      border-color:  #306568;
+      i{
+        color: #306568;
+      }
+  }
+}
   
   
   
