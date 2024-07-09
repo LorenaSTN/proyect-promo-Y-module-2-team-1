@@ -170,7 +170,7 @@ function handleResetClick() {
   cardLinkedin.title = "";
   cardGithub.href = "";
   cardGithub.title = "";
-  profileImage.src = "./images/images/cuyito.jpg";
+  profileImage.src = "/images/joker.jpg";
   profilePreview.src = "";
 }
 
