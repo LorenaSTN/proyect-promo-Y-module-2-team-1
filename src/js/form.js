@@ -11,20 +11,29 @@ const dataCard = {
   github: "",
   photo: "",
 };
+// Se define los valores por defectos.
+const defaultData = {
+  name: 'Harley Quinn',
+  job: 'Joker',
+  email:'#',
+  tel:'#',
+  linkedin:'#',
+  github:'#',
+};
 
-
+//al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
 const formName = document.querySelector(".js-form-name");
 const cardName = document.querySelector(".js-card-name");
 const formJob = document.querySelector(".js-form-job");
 const cardJob = document.querySelector(".js-card-job");
 const formEmail = document.querySelector(".js-form-email");
-const cardEmail = document.querySelector(".js-card-email");
+const cardEmail = document.querySelector(".js-card-email a");
 const formTelephone = document.querySelector(".js-form-telephone");
-const cardTelephone = document.querySelector(".js-card-telephone");
+const cardTelephone = document.querySelector(".js-card-telephone a");
 const formLinkedin = document.querySelector(".js-form-linkedin");
-const cardLinkedin = document.querySelector(".js-card-linkedin");
+const cardLinkedin = document.querySelector(".js-card-linkedin a");
 const formGithub = document.querySelector(".js-form-github");
-const cardGithub = document.querySelector(".js-card-github");
+const cardGithub = document.querySelector(".js-card-github a");
 const formPhoto = document.querySelector(".js-form-photo img");
 const cardPhoto = document.querySelector(".js-card-image");
 
@@ -78,32 +87,32 @@ const inputsFormFill = document.querySelector(".js-form-fill");
 inputsFormFill.addEventListener("input", (event) => {
   // event.preventDefault();
   // console.log ("Hola");
+   //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
   if (event.target.id === "name") {
-    cardName.innerHTML = event.target.value;
+    cardName.innerHTML = event.target.value !== '' ? event.target.value : defaultData.name;
     dataCard.name = event.target.value;
   } else if (event.target.id === "job") {
-    cardJob.innerHTML = event.target.value;
+    cardJob.innerHTML = event.target.value !== '' ? event.target.value : defaultData.job;
     dataCard.job = event.target.value;
   } else if (event.target.id === "email") {
-    cardEmail.href = `mailto:${formEmail.value}`; //cambie el innerHTML por (herf =mailto.)
-    cardEmail.title = formEmail.value; //pusimos la propiedad title en el HTML de los iconos que muestra el valor cuando haces hover
+    cardEmail.href = event.target.value !== '' ? `mailto:${event.target.value}` : defaultData.email;
+    cardEmail.title = formEmail.value; 
     dataCard.email = event.target.value;
   } else if (event.target.id === "telephone") {
-    cardTelephone.href = `tel: ${formTelephone.value}`;
+    cardTelephone.href = event.target.value !== '' ? `tel:${event.target.value}` : defaultData.tel;
     cardTelephone.title = formTelephone.value;
     dataCard.telephone = event.target.value;
   } else if (event.target.id === "linkedin") {
-    cardLinkedin.href = `${formLinkedin.value}`;
+    cardLinkedin.href = event.target.value !== '' ? event.target.value : defaultData.linkedin;
     cardLinkedin.title = formLinkedin.value;
     dataCard.linkedin = event.target.value;
   } else if (event.target.id === "github") {
-    cardGithub.href = `${formGithub.value}`;
+    cardGithub.href = event.target.value !== '' ? event.target.value : defaultData.github;
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
   }
 
 });
-
 
 const resetButton = document.querySelector(".js-button-reset");
 const inputsForm = document.querySelectorAll(".js-form-fill input");
@@ -112,16 +121,16 @@ function handleResetClick() {
   for (const input of inputsForm) {
     input.value = "";
   }
-
-  cardName.innerHTML = "Harley Quinn";
-  cardJob.innerHTML = "Joker";
-  cardEmail.href = "";
+  //se usan los valores por defecto.
+  cardName.innerHTML = defaultData.name;
+  cardJob.innerHTML = defaultData.job;
+  cardEmail.href = defaultData.email;
   cardEmail.title = "";
-  cardTelephone.href = "";
+  cardTelephone.href = defaultData.tel;
   cardTelephone.title = "";
-  cardLinkedin.href = "";
+  cardLinkedin.href = defaultData.linkedin;
   cardLinkedin.title = "";
-  cardGithub.href = "";
+  cardGithub.href = defaultData.github;
   cardGithub.title = "";
   profileImage.src = "./images/joker.jpg";
   profilePreview.src = "";
