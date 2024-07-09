@@ -23,6 +23,13 @@ const palettes = {
   colours4: ["jscolour4__1", "jscolour4__2", "jscolour4__3"],
 };
 
+// const paletteImages = {
+//   colours1: "./images/joker.jpg",
+//   colours2: "./images/joker2.jpeg",
+//   colours3: "url-de-la-imagen-3",
+//   colours4: "url-de-la-imagen-4",
+// };
+
 function handlePalettes() {
   console.log("Se ha seleccionado una opción de color");
   const paletteName = document.querySelector(
@@ -52,7 +59,14 @@ function handlePalettes() {
   telephoneCard.classList.add(palette[2]);
   linkedinCard.classList.add(palette[2]);
   GithubCard.classList.add(palette[2]);
+
+
+  // const cardImage = document.querySelector(".js-card-image")
+  // cardImage.src = paletteImages[paletteName];
+
 }
+
+
 
 options.forEach((option) => {
   option.addEventListener("change", handlePalettes);
