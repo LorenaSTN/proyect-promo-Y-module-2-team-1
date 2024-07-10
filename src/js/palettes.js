@@ -26,7 +26,7 @@ const palettes = {
 const paletteImages = {
   colours1: "./images/joker.jpg",
   colours2: "./images/joker2.jpeg",
-  colours3: "./images/joker3.jpg",
+  colours3: "./images/joker3.jpeg",
   colours4: "./images/joker4.jpg",
 };
 
