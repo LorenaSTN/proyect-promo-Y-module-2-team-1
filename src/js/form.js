@@ -132,7 +132,11 @@ function handleResetClick() {
   cardLinkedin.title = "";
   cardGithub.href = defaultData.github;
   cardGithub.title = "";
+<<<<<<< HEAD
   profileImage.src = "./images/joker.jpg";
+=======
+  profileImage.src = "/images/joker.jpg";
+>>>>>>> 3bd2ffd3739f119e4263c9599f50fa59792983c0
   profilePreview.src = "";
 }
 
