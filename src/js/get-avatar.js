@@ -33,6 +33,8 @@ function writeImage() {
    */
   profileImage.src= fr.result;
   profilePreview.src = fr.result;
+  dataCard.photo = fr.result;
+  console.log(dataCard);
 }
 
 

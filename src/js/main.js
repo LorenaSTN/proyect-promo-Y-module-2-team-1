@@ -1,6 +1,6 @@
 'use strict';
 
-import "./palettes.js";
 import "./form.js";
+import "./palettes.js";
 import "./get-avatar.js";
 
