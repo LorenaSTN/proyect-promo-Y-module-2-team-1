@@ -27,9 +27,12 @@ const palettes = {
 const paletteImages = {
   colours1: "./images/joker.jpg",
   colours2: "./images/joker2.jpeg",
-  colours3: "url-de-la-imagen-3",
-  colours4: "url-de-la-imagen-4",
+  colours3: "./images/joker3.jpeg",
+  colours4: "./images/joker4.jpg",
 };
+
+
+
 
 function handlePalettes() {
 
@@ -79,8 +82,6 @@ function handlePalettes() {
   cardImage.src = paletteImages[paletteName];
 
 }
-
-
 
 options.forEach((option) => {
   option.addEventListener("change", handlePalettes);
