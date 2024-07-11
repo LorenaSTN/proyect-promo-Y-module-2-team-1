@@ -52,7 +52,6 @@ function handlePalettes() {
   else if (paletteName === "colours4") {
     dataCard.palette = 4
   }
-  console.log(dataCard);
   const palette = palettes[paletteName];
 
   nameCard.classList.remove(nameCard.classList[nameCard.classList.length - 1]);
