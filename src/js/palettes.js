@@ -17,25 +17,39 @@ const linkedinCard = document.querySelector(".js-card-linkedin");
 const GithubCard = document.querySelector(".js-card-github");
 
 const palettes = {
+
   colours1: ["jscolour1__1", "jscolour1__2", "jscolour1__3"],
   colours2: ["jscolour2__1", "jscolour2__2", "jscolour2__3"],
   colours3: ["jscolour3__1", "jscolour3__2", "jscolour3__3"],
   colours4: ["jscolour4__1", "jscolour4__2", "jscolour4__3"],
 };
 
-// const paletteImages = {
-//   colours1: "./images/joker.jpg",
-//   colours2: "./images/joker2.jpeg",
-//   colours3: "url-de-la-imagen-3",
-//   colours4: "url-de-la-imagen-4",
-// };
+const paletteImages = {
+  colours1: "./images/joker.jpg",
+  colours2: "./images/joker2.jpeg",
+  colours3: "url-de-la-imagen-3",
+  colours4: "url-de-la-imagen-4",
+};
 
 function handlePalettes() {
+
   console.log("Se ha seleccionado una opción de color");
   const paletteName = document.querySelector(
     'input[name="colours"]:checked'
-  ).value; //colours1, colours2, colours3, colours4, colours5
-
+  ).value;
+  //colours1, colours2, colours3, colours4, colours5
+  if (paletteName === "colours1") {
+    dataCard.palette = 1
+  } else if (paletteName === "colours2") {
+    dataCard.palette = 2
+  }
+  else if (paletteName === "colours3") {
+    dataCard.palette = 3
+  }
+  else if (paletteName === "colours4") {
+    dataCard.palette = 4
+  }
+  console.log(dataCard);
   const palette = palettes[paletteName];
 
   nameCard.classList.remove(nameCard.classList[nameCard.classList.length - 1]);
@@ -61,8 +75,8 @@ function handlePalettes() {
   GithubCard.classList.add(palette[2]);
 
 
-  // const cardImage = document.querySelector(".js-card-image")
-  // cardImage.src = paletteImages[paletteName];
+  const cardImage = document.querySelector(".js-card-image")
+  cardImage.src = paletteImages[paletteName];
 
 }
 

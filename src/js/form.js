@@ -2,7 +2,7 @@
 
 const dataCard = {
   //No estamos utilizndo el valor de dataCard para NADA. Para que sea util tenemos que pasarle el input.
-  palette: null,
+  palette: "",
   name: "",
   job: "",
   phone: "",
@@ -11,15 +11,44 @@ const dataCard = {
   github: "",
   photo: "",
 };
-// Se define los valores por defectos.
+
 const defaultData = {
+  palette: null,
   name: 'Harley Quinn',
   job: 'Joker',
   email:'#',
-  tel:'#',
+  phone:'#',
   linkedin:'#',
   github:'#',
+  photo: "",
 };
+
+
+const buttonCardshare = document.querySelector(".js-botton-share");
+const handleCardshare = (ev) => {
+  ev.preventDefault();
+  
+  fetch('https://dev.adalab.es/api/card/', {
+   method:"POST",
+   body:JSON.stringify(dataCard),
+   header:{"content-type":"application/json"}
+  })
+  .then((response) => response.json())
+  // .then((data) => 
+
+    console.log(data)
+  
+}
+
+
+
+buttonCardshare.addEventListener('click', handleCardshare);
+
+
+
+
+// Se define los valores por defectos.
+
 
 //al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
 const formName = document.querySelector(".js-form-name");
@@ -88,6 +117,8 @@ inputsFormFill.addEventListener("input", (event) => {
   // event.preventDefault();
   // console.log ("Hola");
    //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
+
+   console.log(event.target);
   if (event.target.id === "name") {
     cardName.innerHTML = event.target.value !== '' ? event.target.value : defaultData.name;
     dataCard.name = event.target.value;
@@ -101,7 +132,7 @@ inputsFormFill.addEventListener("input", (event) => {
   } else if (event.target.id === "telephone") {
     cardTelephone.href = event.target.value !== '' ? `tel:${event.target.value}` : defaultData.tel;
     cardTelephone.title = formTelephone.value;
-    dataCard.telephone = event.target.value;
+    dataCard.phone = event.target.value;
   } else if (event.target.id === "linkedin") {
     cardLinkedin.href = event.target.value !== '' ? event.target.value : defaultData.linkedin;
     cardLinkedin.title = formLinkedin.value;
@@ -110,8 +141,11 @@ inputsFormFill.addEventListener("input", (event) => {
     cardGithub.href = event.target.value !== '' ? event.target.value : defaultData.github;
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
+  } else if (event.target.id === "photo") {
+    console.log(event.target.value);
   }
 
+console.log(dataCard)
 });
 
 const resetButton = document.querySelector(".js-button-reset");
