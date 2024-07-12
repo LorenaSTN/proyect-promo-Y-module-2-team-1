@@ -183,3 +183,7 @@ myForm.addEventListener("submit", function (e) {
 
   shareSection.classList.remove("hiden");
 });
+
+
+// PARA EL TEMA TWITTER:
+//https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
