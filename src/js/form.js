@@ -11,18 +11,10 @@ const dataCard = {
   photo: "",
 };
 
-const defaultData = {
-  palette: null,
-  name: "Harley Quinn",
-  job: "Joker",
-  email: "#",
-  phone: "#",
-  linkedin: "#",
-  github: "#",
-  photo: "",
-};
+
 
 const buttonCardshare = document.querySelector(".js-botton-share");
+
 const handleCardshare = (ev) => {
   ev.preventDefault();
 
@@ -30,8 +22,8 @@ const handleCardshare = (ev) => {
     method: "POST",
     body: JSON.stringify(dataCard),
     header: { "content-type": "application/json" },
-  }).then((response) => response.json());
-  // .then((data) => console.log(data))
+  }).then((response) => response.json())
+    .then((data) => console.log(data))
 };
 
 buttonCardshare.addEventListener("click", handleCardshare);
@@ -140,6 +132,17 @@ inputsFormFill.addEventListener("input", (event) => {
 
 const resetButton = document.querySelector(".js-button-reset");
 const inputsForm = document.querySelectorAll(".js-form-fill input");
+
+const defaultData = {
+  palette: null,
+  name: "Joker",
+  job: "Comodín",
+  email: "#",
+  phone: "#",
+  linkedin: "#",
+  github: "#",
+  photo: "",
+};
 
 function handleResetClick() {
   for (const input of inputsForm) {
