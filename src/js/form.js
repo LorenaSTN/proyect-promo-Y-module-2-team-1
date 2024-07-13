@@ -24,25 +24,11 @@ const defaultData = {
 };
 
 
-const buttonCardshare = document.querySelector(".js-botton-share");
-const handleCardshare = (ev) => {
-  ev.preventDefault();
-  
-  fetch('https://dev.adalab.es/api/card/', {
-   method:"POST",
-   body:JSON.stringify(dataCard),
-   header:{"content-type":"application/json"}
-  })
-  .then((response) => response.json())
-  // .then((data) => 
-
-    console.log(data)
-  
-}
-
-
-
-buttonCardshare.addEventListener('click', handleCardshare);
+// const buttonCardshare = document.querySelector(".js-botton-share");
+// const handleCardshare = (ev) => {
+//   ev.preventDefault();
+// }
+// buttonCardshare.addEventListener('click', handleCardshare);
 
 
 
@@ -189,7 +175,26 @@ myForm.addEventListener('submit', function (e) {
   dropdown2.classList.add('hiden');
   dropdown3.classList.remove('hiden');
 
-  // TODO: Crear la tarjeta
+  console.log(dataCard);
+  //lo he movido aqui porque si no, no valida el formulario.
+  fetch('https://dev.adalab.es/api/card/', {
+    method:"POST",
+    body:JSON.stringify(dataCard),
+    header:{"content-type":"application/json"}
+   })
+   .then((response) => response.json())
+   .then((data) => { 
+ 
+     console.log(data)
+   });
 
   shareSection.classList.remove('hiden');
 });
+
+const twitter = document.querySelector('.js-share-twitter');
+
+const newsharetwitter = document.createElement('a');
+newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
+newsharetwitter.className = "twitter-share-button";
+newsharetwitter.dataset.size = "large";
+twitter.appendChild(newsharetwitter);
