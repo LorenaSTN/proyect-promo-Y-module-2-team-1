@@ -1,7 +1,6 @@
 "use strict";
 
 const dataCard = {
-  //No estamos utilizndo el valor de dataCard para NADA. Para que sea util tenemos que pasarle el input.
   palette: "",
   name: "",
   job: "",
@@ -12,29 +11,33 @@ const dataCard = {
   photo: "",
 };
 
-const defaultData = {
-  palette: null,
-  name: 'Harley Quinn',
-  job: 'Joker',
-  email:'#',
-  phone:'#',
-  linkedin:'#',
-  github:'#',
-  photo: "",
-};
 
 
+<<<<<<< HEAD
 // const buttonCardshare = document.querySelector(".js-botton-share");
 // const handleCardshare = (ev) => {
 //   ev.preventDefault();
 // }
 // buttonCardshare.addEventListener('click', handleCardshare);
 
+=======
+const buttonCardshare = document.querySelector(".js-botton-share");
 
+const handleCardshare = (ev) => {
+  ev.preventDefault();
+>>>>>>> cc389cdfb43c14ce71446630f1ff952f5624ae0e
 
+  fetch("https://dev.adalab.es/api/card/", {
+    method: "POST",
+    body: JSON.stringify(dataCard),
+    header: { "content-type": "application/json" },
+  }).then((response) => response.json())
+    .then((data) => console.log(data))
+};
+
+buttonCardshare.addEventListener("click", handleCardshare);
 
 // Se define los valores por defectos.
-
 
 //al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
 const formName = document.querySelector(".js-form-name");
@@ -52,48 +55,42 @@ const cardGithub = document.querySelector(".js-card-github a");
 const formPhoto = document.querySelector(".js-form-photo img");
 const cardPhoto = document.querySelector(".js-card-image");
 
-
-
 const buttonArrow = document.querySelector(".js-button-arrow");
 const dropdown = document.querySelector(".js-dropdown");
 const buttonArrow2 = document.querySelector(".js-button-arrow2");
 const dropdown2 = document.querySelector(".js-dropdown2");
 const buttonArrow3 = document.querySelector(".js-button-arrow3");
 const dropdown3 = document.querySelector(".js-dropdown3");
-const collapsableHeaders = document.querySelectorAll(".js-collapsable-title")
-
+const collapsableHeaders = document.querySelectorAll(".js-collapsable-title");
 
 dropdown2.classList.add("hiden");
 dropdown3.classList.add("hiden");
 
-
-function handleCollapsable(event){
+function handleCollapsable(event) {
   const clickedLegend = event.currentTarget;
-  
-  if (clickedLegend.classList.contains("js-fieldset-palettes")){
+
+  if (clickedLegend.classList.contains("js-fieldset-palettes")) {
     dropdown.classList.toggle("hiden");
     dropdown2.classList.add("hiden");
     dropdown3.classList.add("hiden");
     buttonArrow.classList.toggle("rotate");
-  }else if (clickedLegend.classList.contains("js-fieldset-fill")){
+  } else if (clickedLegend.classList.contains("js-fieldset-fill")) {
     dropdown2.classList.toggle("hiden");
     dropdown.classList.add("hiden");
     dropdown3.classList.add("hiden");
     buttonArrow2.classList.toggle("rotate");
-  }else if (clickedLegend.classList.contains ("js-fieldset-share")){
+  } else if (clickedLegend.classList.contains("js-fieldset-share")) {
     event.preventDefault();
     dropdown3.classList.toggle("hiden");
     dropdown.classList.add("hiden");
     dropdown2.classList.add("hiden");
     buttonArrow3.classList.toggle("rotate");
+  }
+}
 
-  };
-};
-
-
-for(const collapsableHeader of collapsableHeaders){
-  collapsableHeader.addEventListener("click", handleCollapsable)
-};
+for (const collapsableHeader of collapsableHeaders) {
+  collapsableHeader.addEventListener("click", handleCollapsable);
+}
 
 ///////
 
@@ -102,40 +99,59 @@ const inputsFormFill = document.querySelector(".js-form-fill");
 inputsFormFill.addEventListener("input", (event) => {
   // event.preventDefault();
   // console.log ("Hola");
-   //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
+  //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
 
-   console.log(event.target);
+  console.log(event.target);
   if (event.target.id === "name") {
-    cardName.innerHTML = event.target.value !== '' ? event.target.value : defaultData.name;
+    cardName.innerHTML =
+      event.target.value !== "" ? event.target.value : defaultData.name;
     dataCard.name = event.target.value;
   } else if (event.target.id === "job") {
-    cardJob.innerHTML = event.target.value !== '' ? event.target.value : defaultData.job;
+    cardJob.innerHTML =
+      event.target.value !== "" ? event.target.value : defaultData.job;
     dataCard.job = event.target.value;
   } else if (event.target.id === "email") {
-    cardEmail.href = event.target.value !== '' ? `mailto:${event.target.value}` : defaultData.email;
-    cardEmail.title = formEmail.value; 
+    cardEmail.href =
+      event.target.value !== ""
+        ? `mailto:${event.target.value}`
+        : defaultData.email;
+    cardEmail.title = formEmail.value;
     dataCard.email = event.target.value;
   } else if (event.target.id === "telephone") {
-    cardTelephone.href = event.target.value !== '' ? `tel:${event.target.value}` : defaultData.tel;
+    cardTelephone.href =
+      event.target.value !== "" ? `tel:${event.target.value}` : defaultData.tel;
     cardTelephone.title = formTelephone.value;
     dataCard.phone = event.target.value;
   } else if (event.target.id === "linkedin") {
-    cardLinkedin.href = event.target.value !== '' ? event.target.value : defaultData.linkedin;
+    cardLinkedin.href =
+      event.target.value !== "" ? event.target.value : defaultData.linkedin;
     cardLinkedin.title = formLinkedin.value;
     dataCard.linkedin = event.target.value;
   } else if (event.target.id === "github") {
-    cardGithub.href = event.target.value !== '' ? event.target.value : defaultData.github;
+    cardGithub.href =
+      event.target.value !== "" ? event.target.value : defaultData.github;
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
   } else if (event.target.id === "photo") {
     console.log(event.target.value);
   }
 
-console.log(dataCard)
+  console.log(dataCard);
 });
 
 const resetButton = document.querySelector(".js-button-reset");
 const inputsForm = document.querySelectorAll(".js-form-fill input");
+
+const defaultData = {
+  palette: null,
+  name: "Joker",
+  job: "Comodín",
+  email: "#",
+  phone: "#",
+  linkedin: "#",
+  github: "#",
+  photo: "",
+};
 
 function handleResetClick() {
   for (const input of inputsForm) {
@@ -158,22 +174,22 @@ function handleResetClick() {
 
 resetButton.addEventListener("click", handleResetClick);
 
-const buttonShare = document.querySelector('button.button-share');
+const buttonShare = document.querySelector("button.button-share");
 
-buttonShare.addEventListener('click', () => {
-  dropdown.classList.remove('hiden');
-  dropdown2.classList.remove('hiden');
-  dropdown3.classList.remove('hiden');
+buttonShare.addEventListener("click", () => {
+  dropdown.classList.remove("hiden");
+  dropdown2.classList.remove("hiden");
+  dropdown3.classList.remove("hiden");
 });
 
-const shareSection = document.querySelector('section.card-info');
-const myForm = document.querySelector('form');
+const shareSection = document.querySelector("section.card-info");
+const myForm = document.querySelector("form");
 
-myForm.addEventListener('submit', function (e) {
+myForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  dropdown.classList.add('hiden');
-  dropdown2.classList.add('hiden');
-  dropdown3.classList.remove('hiden');
+  dropdown.classList.add("hiden");
+  dropdown2.classList.add("hiden");
+  dropdown3.classList.remove("hiden");
 
   console.log(dataCard);
   //lo he movido aqui porque si no, no valida el formulario.
@@ -188,8 +204,9 @@ myForm.addEventListener('submit', function (e) {
      console.log(data)
    });
 
-  shareSection.classList.remove('hiden');
+  shareSection.classList.remove("hiden");
 });
+
 
 const twitter = document.querySelector('.js-share-twitter');
 
@@ -198,3 +215,4 @@ newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello
 newsharetwitter.className = "twitter-share-button";
 newsharetwitter.dataset.size = "large";
 twitter.appendChild(newsharetwitter);
+

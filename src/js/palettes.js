@@ -28,7 +28,7 @@ const paletteImages = {
   colours1: "./images/joker.jpg",
   colours2: "./images/joker2.jpeg",
   colours3: "./images/joker3.jpeg",
-  colours4: "./images/joker4.jpg",
+  colours4: "./images/joker4.jpeg",
 };
 
 
@@ -52,7 +52,6 @@ function handlePalettes() {
   else if (paletteName === "colours4") {
     dataCard.palette = 4
   }
-  console.log(dataCard);
   const palette = palettes[paletteName];
 
   nameCard.classList.remove(nameCard.classList[nameCard.classList.length - 1]);
