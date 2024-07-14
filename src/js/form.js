@@ -12,6 +12,7 @@ const dataCard = {
   photo: "",
 };
 
+// Se define los valores por defecto.
 const defaultData = {
   palette: null,
   name: 'Joker',
@@ -22,7 +23,6 @@ const defaultData = {
   github:'#',
   photo: "",
 };
-
 
 
 //al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
@@ -41,8 +41,6 @@ const cardGithub = document.querySelector(".js-card-github a");
 const formPhoto = document.querySelector(".js-form-photo img");
 const cardPhoto = document.querySelector(".js-card-image");
 
-
-
 const buttonArrow = document.querySelector(".js-button-arrow");
 const dropdown = document.querySelector(".js-dropdown");
 const buttonArrow2 = document.querySelector(".js-button-arrow2");
@@ -51,41 +49,36 @@ const buttonArrow3 = document.querySelector(".js-button-arrow3");
 const dropdown3 = document.querySelector(".js-dropdown3");
 const collapsableHeaders = document.querySelectorAll(".js-collapsable-title")
 
-
 dropdown2.classList.add("hiden");
 dropdown3.classList.add("hiden");
 
-
-
-//Ocultar/enseñar diferentes partes + rotación de la flecha
 function handleCollapsable(event){
+  event.preventDefault();
   const clickedLegend = event.currentTarget;
   
-  if (clickedLegend.classList.contains("js-fieldset-palettes")){
+  if (clickedLegend.classList.contains("js-fieldset-palettes")) {
     dropdown.classList.toggle("hiden");
     dropdown2.classList.add("hiden");
     dropdown3.classList.add("hiden");
     buttonArrow.classList.toggle("rotate");
-  }else if (clickedLegend.classList.contains("js-fieldset-fill")){
+  }else if (clickedLegend.classList.contains("js-fieldset-fill")) {
     dropdown2.classList.toggle("hiden");
     dropdown.classList.add("hiden");
     dropdown3.classList.add("hiden");
     buttonArrow2.classList.toggle("rotate");
-  }else if (clickedLegend.classList.contains ("js-fieldset-share")){
+  }else if (clickedLegend.classList.contains ("js-fieldset-share")) {
     event.preventDefault();
     dropdown3.classList.toggle("hiden");
     dropdown.classList.add("hiden");
     dropdown2.classList.add("hiden");
     buttonArrow3.classList.toggle("rotate");
-
-  };
-};
-
+  }
+}
 
 
 for(const collapsableHeader of collapsableHeaders){
-  collapsableHeader.addEventListener("click", handleCollapsable)
-};
+  collapsableHeader.addEventListener("click", handleCollapsable);
+}
 
 ///////
 
@@ -95,11 +88,7 @@ for(const collapsableHeader of collapsableHeaders){
 const inputsFormFill = document.querySelector(".js-form-fill");
 
 inputsFormFill.addEventListener("input", (event) => {
-  // event.preventDefault();
-  // console.log ("Hola");
-   //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
-
-   console.log(event.target);
+  //se uso event.target para acceder al valor del input y se uso el operador ternario para asignar valores por defecto.
   if (event.target.id === "name") {
     cardName.innerHTML = event.target.value !== '' ? event.target.value : defaultData.name;
     dataCard.name = event.target.value;
@@ -123,10 +112,8 @@ inputsFormFill.addEventListener("input", (event) => {
     cardGithub.title = formGithub.value;
     dataCard.github = event.target.value;
   } else if (event.target.id === "photo") {
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
-
-console.log(dataCard)
 });
 
 
@@ -168,6 +155,7 @@ buttonShare.addEventListener('click', () => {
 });
 
 const shareSection = document.querySelector('section.card-info');
+const shareError = document.querySelector('section.card-error');
 const myForm = document.querySelector('form');
 
 myForm.addEventListener('submit', function (e) {
@@ -187,16 +175,35 @@ const createdCard = document.querySelector+(".js-card-info");
 const handleCardshare = (ev) => {
     ev.preventDefault();
   //lo he movido porque si no, no valida el
+  //lo he movido porque si no, no valida el formulario
   fetch('https://dev.adalab.es/api/card/', {
-    method:"POST",
-    body:JSON.stringify(dataCard),
-    headers:{"content-type":"application/json"}
-   })
-   .then((response) => response.json())
-   .then((data) => { 
- 
-     console.log(data)
-   });
+    method: 'POST',
+    body: JSON.stringify(dataCard),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then((response) => response.json())
+  .then((data) => { 
+    shareSection.classList.add("hiden");
+    shareError.classList.add("hiden");
+
+    if(data.cardURL) {
+      const shareLink = document.querySelector('.card-info__link')
+      shareLink.href = data.cardURL
+      shareSection.classList.remove('hiden')
+    } else {
+      const errorMessage = document.querySelector('.card-error__message')
+      errorMessage.innerHTML = data.error;
+      shareError.classList.remove('hiden')
+    }
+  })
+  .catch((error) => {
+    const errorMessage = document.querySelector('.card-error__message')
+    errorMessage.innerHTML = error;
+    shareSection.classList.add("hiden");
+    shareError.classList.remove('hiden')
+  });
 
   shareSection.classList.remove('hiden');
 });
