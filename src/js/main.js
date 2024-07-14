@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 import "./form.js";
 import "./palettes.js";
