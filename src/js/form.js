@@ -12,19 +12,10 @@ const dataCard = {
   photo: "",
 };
 
-
-
-const buttonCardshare = document.querySelector(".js-botton-share");
-const createdCard = document.querySelector+(".js-card-info");
-
-const handleCardshare = (ev) => {
-  ev.preventDefault();
-
-
 const defaultData = {
   palette: null,
-  name: 'Harley Quinn',
-  job: 'Joker',
+  name: 'Joker',
+  job: 'Comodín',
   email:'#',
   phone:'#',
   linkedin:'#',
@@ -32,20 +23,6 @@ const defaultData = {
   photo: "",
 };
 
-
-// const buttonCardshare = document.querySelector(".js-botton-share");
-// const handleCardshare = (ev) => {
-//   ev.preventDefault();
-  
-  
-// }
-
-// buttonCardshare.addEventListener('click', handleCardshare);
-
-
-
-
-// Se define los valores por defectos.
 
 
 //al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
@@ -79,6 +56,8 @@ dropdown2.classList.add("hiden");
 dropdown3.classList.add("hiden");
 
 
+
+//Ocultar/enseñar diferentes partes + rotación de la flecha
 function handleCollapsable(event){
   const clickedLegend = event.currentTarget;
   
@@ -103,12 +82,16 @@ function handleCollapsable(event){
 };
 
 
+
 for(const collapsableHeader of collapsableHeaders){
   collapsableHeader.addEventListener("click", handleCollapsable)
 };
 
 ///////
 
+
+
+// completar formulario y que se vea en la tarjeta 
 const inputsFormFill = document.querySelector(".js-form-fill");
 
 inputsFormFill.addEventListener("input", (event) => {
@@ -146,6 +129,9 @@ inputsFormFill.addEventListener("input", (event) => {
 console.log(dataCard)
 });
 
+
+
+// Resetear Tarjeta
 const resetButton = document.querySelector(".js-button-reset");
 const inputsForm = document.querySelectorAll(".js-form-fill input");
 
@@ -170,6 +156,9 @@ function handleResetClick() {
 
 resetButton.addEventListener("click", handleResetClick);
 
+
+
+
 const buttonShare = document.querySelector('button.button-share');
 
 buttonShare.addEventListener('click', () => {
@@ -190,6 +179,13 @@ myForm.addEventListener('submit', function (e) {
   console.log(dataCard);
 
 
+
+// FETCH:
+const buttonCardshare = document.querySelector(".js-botton-share");
+const createdCard = document.querySelector+(".js-card-info");
+
+const handleCardshare = (ev) => {
+    ev.preventDefault();
   //lo he movido porque si no, no valida el
   fetch('https://dev.adalab.es/api/card/', {
     method:"POST",
@@ -205,10 +201,16 @@ myForm.addEventListener('submit', function (e) {
   shareSection.classList.remove('hiden');
 });
 
+buttonCardshare.addEventListener("click", handleCardshare);
+
+
+
+//TWITTER
+
 const twitter = document.querySelector('.js-share-twitter');
 
 const newsharetwitter = document.createElement('a');
 newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
 newsharetwitter.className = "twitter-share-button";
 newsharetwitter.dataset.size = "large";
-twitter.appendChild(newsharetwitter)};
+twitter.appendChild(newsharetwitter);
