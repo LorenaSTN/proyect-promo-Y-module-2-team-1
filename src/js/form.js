@@ -20,15 +20,7 @@ const createdCard = document.querySelector+(".js-card-info");
 const handleCardshare = (ev) => {
   ev.preventDefault();
 
-  fetch("https://dev.adalab.es/api/card/", {
-    method: "POST",
-    body: JSON.stringify(dataCard),
-    header: { "content-type": "application/json" },
-  }).then((response) => response.json())
-    .then((data) => {
-  
-    })
-   
+
 const defaultData = {
   palette: null,
   name: 'Harley Quinn',
@@ -196,6 +188,8 @@ myForm.addEventListener('submit', function (e) {
   dropdown3.classList.remove('hiden');
 
   console.log(dataCard);
+
+
   //lo he movido porque si no, no valida el
   fetch('https://dev.adalab.es/api/card/', {
     method:"POST",
@@ -217,4 +211,4 @@ const newsharetwitter = document.createElement('a');
 newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
 newsharetwitter.className = "twitter-share-button";
 newsharetwitter.dataset.size = "large";
-twitter.appendChild(newsharetwitter);
+twitter.appendChild(newsharetwitter)};
