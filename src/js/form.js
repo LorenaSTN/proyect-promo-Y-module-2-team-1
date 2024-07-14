@@ -24,7 +24,6 @@ const defaultData = {
   photo: "",
 };
 
-
 //al haber cambiado las clases de lugar se actualizaron los selectores para los elementos a.
 const formName = document.querySelector(".js-form-name");
 const cardName = document.querySelector(".js-card-name");
@@ -75,14 +74,11 @@ function handleCollapsable(event){
   }
 }
 
-
 for(const collapsableHeader of collapsableHeaders){
   collapsableHeader.addEventListener("click", handleCollapsable);
 }
 
 ///////
-
-
 
 // completar formulario y que se vea en la tarjeta 
 const inputsFormFill = document.querySelector(".js-form-fill");
@@ -116,8 +112,6 @@ inputsFormFill.addEventListener("input", (event) => {
   }
 });
 
-
-
 // Resetear Tarjeta
 const resetButton = document.querySelector(".js-button-reset");
 const inputsForm = document.querySelectorAll(".js-form-fill input");
@@ -143,9 +137,6 @@ function handleResetClick() {
 
 resetButton.addEventListener("click", handleResetClick);
 
-
-
-
 const buttonShare = document.querySelector('button.button-share');
 
 buttonShare.addEventListener('click', () => {
@@ -166,15 +157,10 @@ myForm.addEventListener('submit', function (e) {
 
   console.log(dataCard);
 
+  // FETCH:
+  const buttonCardshare = document.querySelector(".js-botton-share");
+  const createdCard = document.querySelector+(".js-card-info");
 
-
-// FETCH:
-const buttonCardshare = document.querySelector(".js-botton-share");
-const createdCard = document.querySelector+(".js-card-info");
-
-const handleCardshare = (ev) => {
-    ev.preventDefault();
-  //lo he movido porque si no, no valida el
   //lo he movido porque si no, no valida el formulario
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
@@ -208,10 +194,6 @@ const handleCardshare = (ev) => {
 
   shareSection.classList.remove('hiden');
 });
-
-buttonCardshare.addEventListener("click", handleCardshare);
-
-
 
 //TWITTER
 
