@@ -161,7 +161,8 @@ myForm.addEventListener('submit', function (e) {
   const buttonCardshare = document.querySelector(".js-botton-share");
   const createdCard = document.querySelector+(".js-card-info");
 
-  //lo he movido porque si no, no valida el formulario
+  const handleCardshare = (ev) => {
+    ev.preventDefault();
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(dataCard),
@@ -178,7 +179,8 @@ myForm.addEventListener('submit', function (e) {
       const shareLink = document.querySelector('.card-info__link');
       shareLink.href = data.cardURL;
       shareLink.innerHTML = data.cardURL;
-      shareSection.classList.remove('hiden')
+      shareSection.classList.remove('hiden');
+      createTwitterButton();
     } else {
       const errorMessage = document.querySelector('.card-error__message');
       errorMessage.innerHTML = data.error;
@@ -195,12 +197,17 @@ myForm.addEventListener('submit', function (e) {
   shareSection.classList.remove('hiden');
 };
 
+buttonCardshare.addEventListener("click", handleCardshare);
 //TWITTER
 
 const twitter = document.querySelector('.js-share-twitter');
 
-const newsharetwitter = document.createElement('a');
-newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
-newsharetwitter.className = "twitter-share-button";
-newsharetwitter.dataset.size = "large";
-twitter.appendChild(newsharetwitter);
+const createTwitterButton = () => {
+  const newsharetwitter = document.createElement('a');
+  newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
+  newsharetwitter.className = "twitter-share-button";
+  newsharetwitter.dataset.size = "large";
+  twitter.appendChild(newsharetwitter);
+
+  twttr.widgets.createShareButton('', newsharetwitter);
+}});
