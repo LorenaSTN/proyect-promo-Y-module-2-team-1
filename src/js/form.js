@@ -178,7 +178,8 @@ myForm.addEventListener('submit', function (e) {
       const shareLink = document.querySelector('.card-info__link');
       shareLink.href = data.cardURL;
       shareLink.innerHTML = data.cardURL;
-      shareSection.classList.remove('hiden')
+      shareSection.classList.remove('hiden');
+      createTwitterButton();
     } else {
       const errorMessage = document.querySelector('.card-error__message');
       errorMessage.innerHTML = data.error;
@@ -199,8 +200,12 @@ myForm.addEventListener('submit', function (e) {
 
 const twitter = document.querySelector('.js-share-twitter');
 
-const newsharetwitter = document.createElement('a');
-newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
-newsharetwitter.className = "twitter-share-button";
-newsharetwitter.dataset.size = "large";
-twitter.appendChild(newsharetwitter);
+const createTwitterButton = () => {
+  const newsharetwitter = document.createElement('a');
+  newsharetwitter.setAttribute('href', "https://twitter.com/intent/post?text=Hello%20world");
+  newsharetwitter.className = "twitter-share-button";
+  newsharetwitter.dataset.size = "large";
+  twitter.appendChild(newsharetwitter);
+
+  twttr.widgets.createShareButton('', newsharetwitter);
+}
