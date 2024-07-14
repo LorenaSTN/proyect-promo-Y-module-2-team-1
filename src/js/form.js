@@ -164,8 +164,7 @@ myForm.addEventListener('submit', function (e) {
   dropdown2.classList.add('hiden');
   dropdown3.classList.remove('hiden');
 
-  console.log(dataCard);
-
+});
 
 
 // FETCH:
@@ -174,8 +173,7 @@ const createdCard = document.querySelector+(".js-card-info");
 
 const handleCardshare = (ev) => {
     ev.preventDefault();
-  //lo he movido porque si no, no valida el
-  //lo he movido porque si no, no valida el formulario
+
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(dataCard),
@@ -206,7 +204,7 @@ const handleCardshare = (ev) => {
   });
 
   shareSection.classList.remove('hiden');
-});
+};
 
 buttonCardshare.addEventListener("click", handleCardshare);
 

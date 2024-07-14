@@ -40,8 +40,8 @@
     <!-- traje elementos a (ancla) de target // la almohadilla se usa para que el enlace no te redirija a otra pagina-->
     <div class="card">
       <div class="nav-card jscolour1__2">
-        <h1 class="nav-card__title js-card-name jscolour1__1">Harley Quinn</h1>
-        <h2 class="nav-card__sub-title js-card-job">Joker</h2>
+        <h1 class="nav-card__title js-card-name jscolour1__1">Joker</h1>
+        <h2 class="nav-card__sub-title js-card-job">Comodín</h2>
       </div>
 
       <div class="section-image">
@@ -197,11 +197,11 @@
     
             <div class="fill js-form-fill js-dropdown2">
               <label for="name" class="fill__label">Nombre Completo*</label>
-              <input type="text" class=" fill__input js-form-name" id="name" name="fullName" placeholder="Ej: Harley Quinn" required>
+              <input type="text" class=" fill__input js-form-name" id="name" name="fullName" placeholder="Ej: Joker" required>
     
 
               <label for="job" class="fill__label">Puesto*</label>
-              <input type="text" class=" fill__input js-form-job" id="job" name="job" placeholder="Ej: Joker" required>
+              <input type="text" class=" fill__input js-form-job" id="job" name="job" placeholder="Ej: Comodín" required>
               
               <label for="photo" class="fill__label form_photolabel js-form-photo">Imagen de perfil</label>
               <div class="div-buttons">
@@ -211,16 +211,16 @@
               </div>
     
               <label for="email" class="fill__label">Email*</label>
-              <input type="email" class=" fill__input js-form-email" id="email" name="email" placeholder="Ej: harleyquinn_1990@gmail.com" required>
+              <input type="email" class=" fill__input js-form-email" id="email" name="email" placeholder="Ej: joker_1990@gmail.com" required>
             
               <label for="telephone" class="fill__label">Teléfono*</label>
               <input type="tel" class=" fill__input js-form-telephone" id="telephone" name="phone" placeholder="Ej: 666-66-66-66" required>
             
               <label for="linkedin" class="fill__label">Linkedin*</label>
-              <input type="text" class="fill__input js-form-linkedin" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/harley.quinn" required>
+              <input type="text" class="fill__input js-form-linkedin" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/joker" required>
     
               <label for="github" class="fill__label">Github*</label>
-              <input type="text" class="fill__input js-form-github" id="github" name="github" placeholder="Ej: @harley-quinn" required>
+              <input type="text" class="fill__input js-form-github" id="github" name="github" placeholder="Ej: @joker" required>
             
             </div>
           </fieldset>
@@ -240,28 +240,35 @@
 
     <section class="share-wrapper js-dropdown3">
       <section class="submit-section">
-        <button class="button-share" type="submit">
+        <button class="button-share js-botton-share" type="submit">
           <i class="button-share__image fa-regular fa-address-card"></i>
           <span>CREAR TARJETA</span>
         </button>
       </section>
-      
+
       <section class="card-info hiden">
         <hr class="line" />
         <h3>La tarjeta ha sido creada:</h3>
         <a class="card-info__link" href="">Link</a>
-        <button class="button-twitter">
-          <i class="fa-brands fa-twitter"></i>
-          <span> Compartir en Twitter</span>
-        </button>
         <hr class="line" />
       </section>
 
+      <section class="card-error hiden">
+        <hr class="line" />
+        <h3>Ha ocurrido un error:</h3>
+        <span class="card-error__message"></span>
+        <hr class="line" />
+      </section>
+    </section>
+
+    <section class="share-wrapper js-share-twitter">
+      <!-- <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">
+        Tweet
+      </a> -->
     </section>
   </fieldset>
 </section>
 </form>
-
       </div>
     </main>
     <footer>
@@ -270,6 +277,23 @@
             <img class="image1" src="./images/logo-2.png">
     </div>
 </footer>
+    
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+    
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
     <script src="./js/main.js"></script>
   </body>
 </html>
