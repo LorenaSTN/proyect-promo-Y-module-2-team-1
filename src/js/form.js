@@ -177,20 +177,21 @@ myForm.addEventListener('submit', function (e) {
     shareError.classList.add("hiden");
 
     if(data.cardURL) {
-      const shareLink = document.querySelector('.card-info__link')
-      shareLink.href = data.cardURL
+      const shareLink = document.querySelector('.card-info__link');
+      shareLink.href = data.cardURL;
+      shareLink.innerHTML = data.cardURL;
       shareSection.classList.remove('hiden')
     } else {
-      const errorMessage = document.querySelector('.card-error__message')
+      const errorMessage = document.querySelector('.card-error__message');
       errorMessage.innerHTML = data.error;
-      shareError.classList.remove('hiden')
+      shareError.classList.remove('hiden');
     }
   })
   .catch((error) => {
-    const errorMessage = document.querySelector('.card-error__message')
+    const errorMessage = document.querySelector('.card-error__message');
     errorMessage.innerHTML = error;
     shareSection.classList.add("hiden");
-    shareError.classList.remove('hiden')
+    shareError.classList.remove('hiden');
   });
 
   shareSection.classList.remove('hiden');
