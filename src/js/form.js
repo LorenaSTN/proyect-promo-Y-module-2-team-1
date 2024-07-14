@@ -14,6 +14,7 @@ const dataCard = {
 
 
 const buttonCardshare = document.querySelector(".js-botton-share");
+const createdCard = document.querySelector+(".js-card-info");
 
 const handleCardshare = (ev) => {
   ev.preventDefault();
@@ -23,7 +24,10 @@ const handleCardshare = (ev) => {
     body: JSON.stringify(dataCard),
     header: { "content-type": "application/json" },
   }).then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+  
+    })
+   
 };
 
 buttonCardshare.addEventListener("click", handleCardshare);
