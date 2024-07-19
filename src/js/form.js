@@ -161,7 +161,8 @@ myForm.addEventListener('submit', function (e) {
   const buttonCardshare = document.querySelector(".js-botton-share");
   const createdCard = document.querySelector+(".js-card-info");
 
-  //lo he movido porque si no, no valida el formulario
+  const handleCardshare = (ev) => {
+    ev.preventDefault();
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(dataCard),
@@ -194,8 +195,9 @@ myForm.addEventListener('submit', function (e) {
   });
 
   shareSection.classList.remove('hiden');
-});
+};
 
+buttonCardshare.addEventListener("click", handleCardshare);
 //TWITTER
 
 const twitter = document.querySelector('.js-share-twitter');
@@ -208,5 +210,4 @@ const createTwitterButton = () => {
   twitter.appendChild(newsharetwitter);
 
   twttr.widgets.createShareButton('', newsharetwitter);
-};
-
+}});
