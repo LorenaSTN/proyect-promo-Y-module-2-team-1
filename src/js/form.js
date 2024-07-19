@@ -131,7 +131,7 @@ function handleResetClick() {
   cardLinkedin.title = "";
   cardGithub.href = defaultData.github;
   cardGithub.title = "";
-  profileImage.src = "/images/joker.jpg";
+  profileImage.src = "./images/joker.jpg";
   profilePreview.src = "";
 }
 
@@ -208,4 +208,5 @@ const createTwitterButton = () => {
   twitter.appendChild(newsharetwitter);
 
   twttr.widgets.createShareButton('', newsharetwitter);
-}
+};
+
