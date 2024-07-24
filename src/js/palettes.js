@@ -17,7 +17,6 @@ const linkedinCard = document.querySelector(".js-card-linkedin");
 const GithubCard = document.querySelector(".js-card-github");
 
 const palettes = {
-
   colours1: ["jscolour1__1", "jscolour1__2", "jscolour1__3"],
   colours2: ["jscolour2__1", "jscolour2__2", "jscolour2__3"],
   colours3: ["jscolour3__1", "jscolour3__2", "jscolour3__3"],
@@ -31,26 +30,19 @@ const paletteImages = {
   colours4: "./images/joker4.jpeg",
 };
 
-
-
-
 function handlePalettes() {
-
-  console.log("Se ha seleccionado una opción de color");
   const paletteName = document.querySelector(
     'input[name="colours"]:checked'
   ).value;
   //colours1, colours2, colours3, colours4, colours5
   if (paletteName === "colours1") {
-    dataCard.palette = 1
+    dataCard.palette = 1;
   } else if (paletteName === "colours2") {
-    dataCard.palette = 2
-  }
-  else if (paletteName === "colours3") {
-    dataCard.palette = 3
-  }
-  else if (paletteName === "colours4") {
-    dataCard.palette = 4
+    dataCard.palette = 2;
+  } else if (paletteName === "colours3") {
+    dataCard.palette = 3;
+  } else if (paletteName === "colours4") {
+    dataCard.palette = 4;
   }
   const palette = palettes[paletteName];
 
@@ -76,10 +68,8 @@ function handlePalettes() {
   linkedinCard.classList.add(palette[2]);
   GithubCard.classList.add(palette[2]);
 
-
-  const cardImage = document.querySelector(".js-card-image")
+  const cardImage = document.querySelector(".js-card-image");
   cardImage.src = paletteImages[paletteName];
-
 }
 
 options.forEach((option) => {

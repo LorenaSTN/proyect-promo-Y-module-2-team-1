@@ -1,83 +1,85 @@
+<form action="#">
+  <section class="section-form">
+    <fieldset class="fieldset">
+      <div class="fieldset__main js-collapsable-title js-fieldset-palettes">
+        <div class="fieldset__div">
+          <i class="fa-regular fa-object-ungroup fieldset__div_icon"></i>
+          <h2 class="fieldset__div_title">DISEÑA</h2>
+        </div>
+        <button class="button-options js-button-arrow">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
 
+      <div class="colours js-dropdown">
+        <p class="title-colours">COLORES</p>
 
-    <form action="#">
-    <section class="section-form">
-            <fieldset class="fieldset">
-              <div class="fieldset__main js-collapsable-title js-fieldset-palettes">
-                <div class="fieldset__div">
-                    <i class="fa-regular fa-object-ungroup fieldset__div_icon"></i>
-                    <h2 class="fieldset__div_title">DISEÑA</h2> 
-                   
-                </div>
-                <button class="button-options js-button-arrow"><i class="fa-solid fa-chevron-up"></i></button>
-              </div>
-           
-            <div class="colours js-dropdown">
-                <p class="title-colours">COLORES</p>
-    
-                <div class="colours__options">
-                <label for="colours1" class="label-colours ">
-                    <input
-                    class="input_col" 
-                    id="colours1"
-                    type="radio"
-                    value="colours1"
-                    name="colours"
-                    checked>
-    
-                    <div class="options">
-                    <div class="divcol col1__1"></div> 
-                    <div class="divcol col1__2"></div>
-                    <div class="divcol col1__3"></div>
-                    </div>
-                </label>
-    
-                <label for="colours2" class="label-colours ">
-                  <input
-                  class="input_col" 
-                  id="colours2"
-                  type="radio"
-                  value="colours2"
-                  name="colours">
-    
-                  <div class="options">
-                  <div class="divcol col2__1"></div> 
-                  <div class="divcol col2__2"></div>
-                  <div class="divcol col2__3"></div>
-                  </div>
-              </label>
-    
-    
-              <label for="colours3" class="label-colours ">
-                <input
-                class="input_col" 
-                id="colours3"
-                type="radio"
-                value="colours3"
-                name="colours">
-    
-                <div class="options">
-                <div class="divcol col3__1"></div> 
-                <div class="divcol col3__2"></div>
-                <div class="divcol col3__3"></div>
-                </div>
-            </label>
-    
-              <label for="colours4" class="label-colours ">
-              <input
-              class="input_col" 
+        <div class="colours__options">
+          <label for="colours1" class="label-colours">
+            <input
+              class="input_col"
+              id="colours1"
+              type="radio"
+              value="colours1"
+              name="colours"
+              checked
+            />
+
+            <div class="options">
+              <div class="divcol col1__1"></div>
+              <div class="divcol col1__2"></div>
+              <div class="divcol col1__3"></div>
+            </div>
+          </label>
+
+          <label for="colours2" class="label-colours">
+            <input
+              class="input_col"
+              id="colours2"
+              type="radio"
+              value="colours2"
+              name="colours"
+            />
+
+            <div class="options">
+              <div class="divcol col2__1"></div>
+              <div class="divcol col2__2"></div>
+              <div class="divcol col2__3"></div>
+            </div>
+          </label>
+
+          <label for="colours3" class="label-colours">
+            <input
+              class="input_col"
+              id="colours3"
+              type="radio"
+              value="colours3"
+              name="colours"
+            />
+
+            <div class="options">
+              <div class="divcol col3__1"></div>
+              <div class="divcol col3__2"></div>
+              <div class="divcol col3__3"></div>
+            </div>
+          </label>
+
+          <label for="colours4" class="label-colours">
+            <input
+              class="input_col"
               id="colours4"
               type="radio"
               value="colours4"
-              name="colours">
-    
-              <div class="options">
-              <div class="divcol col4__1"></div> 
+              name="colours"
+            />
+
+            <div class="options">
+              <div class="divcol col4__1"></div>
               <div class="divcol col4__2"></div>
               <div class="divcol col4__3"></div>
-              </div>
+            </div>
           </label>
-<!-- 
+          <!-- 
            <label for="colours5" class="label-colours ">
             <input
             class="input_col" 
@@ -93,53 +95,104 @@
             </div>
         </label>  
  -->
+        </div>
+      </div>
+    </fieldset>
+  </section>
 
-        
-            </div>
-            </div>
-          </fieldset>
-       
-        </section>
-    
-        <section class="section-form form-fill">
-            <fieldset class="fieldset">
-              <div class="fieldset__main js-collapsable-title js-fieldset-fill">
-              <div class="fieldset__div">
-                <i class="fa-regular fa-keyboard fieldset__div_icon"></i>
-                <h2 class="fieldset__div_title">RELLENA</h2>
+  <section class="section-form form-fill">
+    <fieldset class="fieldset">
+      <div class="fieldset__main js-collapsable-title js-fieldset-fill">
+        <div class="fieldset__div">
+          <i class="fa-regular fa-keyboard fieldset__div_icon"></i>
+          <h2 class="fieldset__div_title">RELLENA</h2>
+        </div>
+        <button class="button-options js-button-arrow2">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
 
-              </div>
-              <button class="button-options js-button-arrow2"><i class="fa-solid fa-chevron-up "></i></button>
-            </div>
-    
-            <div class="fill js-form-fill js-dropdown2">
-              <label for="name" class="fill__label">Nombre Completo*</label>
-              <input type="text" class=" fill__input js-form-name" id="name" name="fullName" placeholder="Ej: Joker" required>
-    
+      <div class="fill js-form-fill js-dropdown2">
+        <label for="name" class="fill__label">Nombre Completo*</label>
+        <input
+          type="text"
+          class="fill__input js-form-name"
+          id="name"
+          name="fullName"
+          placeholder="Ej: Joker"
+          required
+        />
 
-              <label for="job" class="fill__label">Puesto*</label>
-              <input type="text" class=" fill__input js-form-job" id="job" name="job" placeholder="Ej: Comodín" required>
-              
-              <label for="photo" class="fill__label form_photolabel js-form-photo">Imagen de perfil</label>
-              <div class="div-buttons">
-              <label for = "photo" class="button-addimage form__photobutton js__profile-trigger">Añadir Imagen</label>
-              <input class="form__photoinput js__profile-upload-btn" type="file" name="photo" id="photo">
-              <span class="blank-square form__photothumb js__profile-preview"><img src="" alt=""> </span>
-              </div>
-    
-              <label for="email" class="fill__label">Email*</label>
-              <input type="email" class=" fill__input js-form-email" id="email" name="email" placeholder="Ej: joker_1990@gmail.com" required>
-            
-              <label for="telephone" class="fill__label">Teléfono*</label>
-              <input type="tel" class=" fill__input js-form-telephone" id="telephone" name="phone" placeholder="Ej: 666-66-66-66" required>
-            
-              <label for="linkedin" class="fill__label">Linkedin*</label>
-              <input type="text" class="fill__input js-form-linkedin" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/joker" required>
-    
-              <label for="github" class="fill__label">Github*</label>
-              <input type="text" class="fill__input js-form-github" id="github" name="github" placeholder="Ej: @joker" required>
-            
-            </div>
-          </fieldset>
-        </section>
-        
+        <label for="job" class="fill__label">Puesto*</label>
+        <input
+          type="text"
+          class="fill__input js-form-job"
+          id="job"
+          name="job"
+          placeholder="Ej: Comodín"
+          required
+        />
+
+        <label for="photo" class="fill__label form_photolabel js-form-photo"
+          >Imagen de perfil</label
+        >
+        <div class="div-buttons">
+          <label
+            for="photo"
+            class="button-addimage form__photobutton js__profile-trigger"
+            >Añadir Imagen</label
+          >
+          <input
+            class="form__photoinput js__profile-upload-btn"
+            type="file"
+            name="photo"
+            id="photo"
+          />
+          <span class="blank-square form__photothumb js__profile-preview"
+            ><img src="" alt="" />
+          </span>
+        </div>
+
+        <label for="email" class="fill__label">Email*</label>
+        <input
+          type="email"
+          class="fill__input js-form-email"
+          id="email"
+          name="email"
+          placeholder="Ej: joker_1990@gmail.com"
+          required
+        />
+
+        <label for="telephone" class="fill__label">Teléfono*</label>
+        <input
+          type="tel"
+          class="fill__input js-form-telephone"
+          id="telephone"
+          name="phone"
+          placeholder="Ej: 666-66-66-66"
+          required
+        />
+
+        <label for="linkedin" class="fill__label">Linkedin*</label>
+        <input
+          type="text"
+          class="fill__input js-form-linkedin"
+          id="linkedin"
+          name="linkedin"
+          placeholder="Ej: linkedin.com/in/joker"
+          required
+        />
+
+        <label for="github" class="fill__label">Github*</label>
+        <input
+          type="text"
+          class="fill__input js-form-github"
+          id="github"
+          name="github"
+          placeholder="Ej: @joker"
+          required
+        />
+      </div>
+    </fieldset>
+  </section>
+</form>
